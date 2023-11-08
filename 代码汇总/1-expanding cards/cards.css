@@ -1,0 +1,9 @@
+* {
+    box-sizing: border-box;
+    /* css 盒模型
+    https: //developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/The_box_model#block_and_inline_boxes*/
+    /*默认浏览器会使用标准模型。如果需要使用替代模型，
+    你可以通过为其设置 box-sizing: border-box 来实现。
+    这样就可以告诉浏览器使用 border-box 来定义区域，
+    从而设定你想要的大小。*/
+}

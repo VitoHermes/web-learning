@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    form {
+        width: 80%;
+        max-width: 600px;
+        min-width: 400px;
+        margin: 0 auto;
+        font-family: "Microsoft Yahei";
+        font-size: 20px;
+    }
+    input {
+        display: block;
+        width: 100%;
+        height: 30px;
+        margin: 10px 0;
+    }
+</style>
+<body>
+    <form action="">
+        <fieldset>
+            <legend>表单事件</legend>
+            <label for="">e-mail:<input type="email" name="" id="txt1" /></label>
+            <label for="">number:<input type="text" name="" id="txt2" /></label>
+            <input type="submit" />
+        </fieldset>
+    </form>
+    <script>
+        var txt1 = document.getElementById('txt1');
+        var txt2 = document.getElementById('txt2');
+        var num = 0;
+        txt1.oninput = function () {
+            num++;
+            txt2.value = num;
+        }
+        txt1.oninvalid = function () {
+            this.setCustomValidity('亲，请输入正确哦');
+        }
+    </script>
+</body>
+
+</html>

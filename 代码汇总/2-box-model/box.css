@@ -1,0 +1,24 @@
+.box {
+    /*box-sizing: border-box; 增加为替代盒模型，删除为标准盒模型*/
+    background-color: azure;
+    width: 350px;
+    height: 150px;
+    margin: 25px; /*外边距：总是在计算可见部分后额外添加。*/
+    padding: 30px; /*内边距*/
+    border: 1px solid;
+}
+/*margin 不计入实际大小 ——
+当然，它会影响盒子在页面所占空间，
+但是影响的是盒子外部空间。盒子的
+范围到边框为止 —— 不会延伸到 margin。*/
+/*边框是在边距和填充框之间绘制的。
+如果你正在使用标准的盒模型，
+边框的大小将添加到框的宽度和高度。
+如果你使用的是替代盒模型，那么边框的大小会使内容框更小，
+因为它会占用一些可用的宽度和高度。*/
+.inner {
+    border: 1px solid salmon;
+    border-bottom: 2px solid salmon;
+    text-align: center;
+
+}

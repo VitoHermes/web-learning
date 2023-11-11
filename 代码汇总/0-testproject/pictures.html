@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>图片标签</title>
+    <style>
+        .css_bg {
+            background-image: url("img/cat.png");
+
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <img width="300" src="img/cat.png" alt="图片不见了" title="这是美女" align="right" />
+    </div>
+    <div class="figure">
+        <img src="img/cat.png" alt="一只猫咪" width="400" />
+        <p>曼哈顿的猫🐱</p>
+        <!--为图片提供一个语义容器，在标题和图片之间建立清晰的关联。-->
+        <figure>
+            <img src="img/cat.png" alt="a cat" width="300" />
+            <figcaption>一只猫咪</figcaption>
+        </figure>
+    </div>
+    <div class="css_bg">
+        This is a background picture
+    </div>
+
+
+    <!--响应式图片-->
+    <picture>
+        <source media="(max-width: 799px)" srcset="elva-480w-close-portrait.jpg" />
+        <source media="(min-width: 800px)" srcset="elva-800w.jpg" />
+        <img src="elva-800w.jpg" alt="Chris standing up holding his daughter Elva" />
+    </picture>
+</body>
+
+</html>

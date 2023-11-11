@@ -1,4 +1,8 @@
 <!DOCTYPE html>
+<!--课程链接
+https://developer.mozilla.org/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content
+-->
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -6,8 +10,28 @@
     <title>Document</title>
 </head>
 <body>
-    <video width="400" height="300" controls autoplay>
-    <source src="video/1.mp4" type="video/mp4">
+    <video src="video/girl.mp4" controls muted>
+        <p>你的浏览器不支持mp4视频</p>
     </video>
+
+    <!--浏览器将会检查 <source> 标签，
+        并且播放第一个与其自身 codec 相匹配的媒体。
+        你的视频应当包括 WebM 和 MP4 两种格式，
+        这两种在目前已经足够支持大多数平台和浏览器。-->
+    <video
+        width="400" height="300"
+        controls
+        autoplay
+        loop
+        muted
+        poster="img/cat.png">
+        <source src="video/girl.mp4" type="video/mp4">
+        <source src="video/girl.webm" type="video/webm">
+    </video>
+    <video controls muted width="200px">
+        <source src="video/girl.mp4" type="video/mp4">
+    </video>
+
+    
 </body>
 </html>

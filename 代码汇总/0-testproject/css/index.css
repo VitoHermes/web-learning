@@ -1,3 +1,31 @@
-body {
-    background: #ffffff url("../img/cat.png") no-repeat right top;
+.head {
+    background-color: rebeccapurple;
+    width: 80%;
+    border: 2px black solid;
+    border-radius: 5px;
+    margin: 5px;
+    padding: 10px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 30px;
+    color: white;
+
+}
+
+.main-area {
+    width: 80%;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin: 5px;
+    padding: 10px;
+}
+
+.notion {
+    font-size: 14px;
+    padding: 10px;
+
+}
+@media(min-width:50em) {
+    .head {
+        background-color: blue;
+    }
 }

@@ -1,0 +1,26 @@
+.weiyuansu p::first-line {
+    font-size: 120%;
+    font-weight: bold;
+}
+
+.weilei p:first-child {
+    font-size: 120%;
+    font-weight: bold;
+}
+a:link,
+a:visited {
+    color: rebeccapurple;
+    font-weight: bold;
+}
+
+a:hover {
+    color: hotpink;
+}
+
+.combine p:first-child::first-line{
+font-size: 120%;
+    font-weight: bold;
+}
+.box::before {
+    content: "通过css语句::before添加的内容：";
+}

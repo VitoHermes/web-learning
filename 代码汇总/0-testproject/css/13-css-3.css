@@ -1,0 +1,31 @@
+.box p {
+    color: red;
+}
+
+ul>li {
+    border-top: 5px solid red;
+}
+
+li {
+    border-bottom: 2px solid black;
+}
+
+h1+p {
+    font-weight: bold;
+    background-color: #333;
+    color: #fff;
+    padding: .5em;
+}
+
+h1~p {
+    font-weight: bold;
+    background-color: #333;
+    color: #fff;
+    padding: .5em;
+}
+
+table tr:nth-child(even) {
+    background-color: #333;
+    color: white;
+
+}

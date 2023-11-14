@@ -1,4 +1,11 @@
-.head {
+/*选择器类型*/
+/*类型、类和 ID 选择器*/
+
+body {/*类型选择器*/
+    font-size: 20px;
+}
+
+.head { /*类选择器*/
     background-color: rebeccapurple;
     width: 80%;
     border: 2px black solid;
@@ -11,7 +18,35 @@
 
 }
 
+#123 {/*id选择器*/
+    font-size: 10px;
+}
+
+/*存否和值选择器*/
+a[class] { /*存否和值选择器，筛选出a且含有class属性的部分*/
+    font-size: 20px;
+}
+a[href="pages/10-h5.html"] { /*完全匹配*/
+    font-size: 20px;
+}
+
+a[href～="pages/10-h5.html"] {/*包含匹配*/
+    font-size: 20px;
+}
+
+a[href｜="pages/10-h5.html"] {/*以什么开始匹配*/
+    font-size: 100px;
+}
+
 .main-area {
+    width: 80%;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin: 5px;
+    padding: 10px;
+}
+
+.main_area2 {
     width: 80%;
     border: 1px solid black;
     border-radius: 5px;
@@ -28,4 +63,17 @@
     .head {
         background-color: blue;
     }
+}
+
+a:link,/*伪类*/
+a:visited {
+    color: black;
+}
+
+a:hover {
+    text-decoration: none;
+    color: blue;
+}
+.main-area > a {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
 }

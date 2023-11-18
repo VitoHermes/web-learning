@@ -1,0 +1,44 @@
+/*css 叠层*/
+/*根据创建顺序，最上面的层（后创建的）生效*/
+/*
+@layer site, page;
+
+@layer page {
+    h1 {
+        text-decoration: overline;
+        color: red;
+    }
+}
+
+@layer site {
+    h1 {
+        text-decoration: underline;
+        color: green;
+    }
+}
+*/
+
+/* 导入
+@import url(../css/11-css-1.css) layer(main-layer);
+*/
+
+@media (min-width: 500px) {
+    @layer site;
+}
+
+@layer page {
+    h1 {
+        text-decoration: overline;
+        color: red;
+    }
+    li {
+        font-size: 25px;
+    }
+}
+
+@layer site {
+    h1 {
+        text-decoration: underline;
+        color: green;
+    }
+}

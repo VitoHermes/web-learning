@@ -1,0 +1,19 @@
+h1 {
+    padding-left: 30px;
+}
+
+p {
+    padding-left: 30px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    margin: 0px;
+}
+span {
+    background-color: rgb(202, 202, 202);
+    border: grey 1px solid;
+}
+
+img {
+    width: 500px;
+    
+}

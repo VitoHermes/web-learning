@@ -1,0 +1,19 @@
+.box {
+    width: 200px;
+    height: 200px;
+    float: left;
+    margin: 50px;
+}
+
+img {
+    height: 100%;
+    width: 100%;
+}
+
+.cover {
+    object-fit: cover;
+}
+
+.contain {
+    object-fit: contain;
+}

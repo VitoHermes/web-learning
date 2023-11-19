@@ -1,0 +1,27 @@
+html {
+    font-size: 16px;
+}
+
+.ems li {
+    font-size: 1.3em;
+}
+
+.rems li {
+    font-size: 1.3rem;
+}
+p {
+text-align: center;
+background-color: aquamarine;
+width: 50vw;
+min-width: 300px;
+}
+.box {
+    box-sizing: border-box;
+    border: 5px solid darkblue;
+    height: 150px;
+    width: 200px;
+    float: left; /*让盒子水平分布*/
+    margin: 10px;
+    padding: 5px;
+    overflow: hidden;
+}

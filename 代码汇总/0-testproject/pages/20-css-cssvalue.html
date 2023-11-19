@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/20-css-cssvalue.css" >
+</head>
+<body>
+    <p>em 单位的意思是“父元素的字体大小”,每一个连续的嵌套级别都会逐渐变大</p>
+    <ul class="ems">
+        <li>One(em)</li>
+        <li>Two(em)</li>
+        <li>Three(em)
+            <ul>
+                <li>Three A（em）</li>
+                <li>Three B（em）
+                    <ul>
+                        <li>Three B 2（em）</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+    </ul>
+    <p>rem是“根元素的字体大小”,每一个连续的嵌套层都不会不断变大。</p>
+    <ul class="rems">
+        <li>One</li>
+        <li>Two</li>
+        <li>Three
+            <ul>
+                <li>Three A</li>
+                <li>Three B
+                    <ul>
+                        <li>Three B 2</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+    </ul>
+    <div class="wrapper">
+        <div class="box"></div>
+        <div class="box">float: left; 让盒子水平分布 These boxes both have a height set, this box has content in it which will need more space than the
+            assigned height, and so we get overflow. </div>
+    </div>
+</body>
+</html>

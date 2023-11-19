@@ -1,0 +1,102 @@
+/* General setup */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0 auto;
+    min-width: 1000px;
+    max-width: 1400px;
+    line-height: 1.7rem;
+}
+html {
+    font-size: 16px;
+}
+/* Layout */
+
+section {
+    float: left;
+    width: 50%;
+}
+
+aside {
+    float: left;
+    width: 30%;
+}
+
+nav {
+    float: left;
+    width: 20%;
+}
+
+footer {
+    clear: both;
+}
+
+header,
+section,
+aside,
+nav,
+footer {
+    padding: 20px;
+    line-height: 2rem;
+}
+
+/* header and footer */
+
+header,
+footer {
+    border-top: 5px solid #a66;
+    border-bottom: 5px solid #a66;
+}
+
+/* WRITE YOUR CODE BELOW HERE */
+header {
+    text-align: center;
+    font-size: 1.8rem;
+    letter-spacing: 0.2rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+p {
+    font-size: 1.3rem;
+}
+a {
+    font-size: 1.3rem;
+    text-decoration: none;
+    border-bottom: 1px solid;
+}
+ul {
+    font-size: 1.3rem;
+}
+
+p {
+    text-indent: 20px;
+}
+a:link,
+a:visited,
+a:focus {
+    color:#a66;
+}
+
+a:hover {
+    background: orange;
+}
+
+a:active {
+    background: red;
+    color: white;
+}
+.bar a {
+    border: none;
+}
+.bar li {
+    list-style-type: none;
+    border: 1px solid;
+    margin: 5px;
+    padding: 5px;
+}

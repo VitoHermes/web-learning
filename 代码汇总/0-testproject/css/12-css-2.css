@@ -1,4 +1,5 @@
 /*伪类和伪元素*/
+/*要按照 link/visited/focus/hover/avtive的顺序指定样式*/
 .weiyuansu p::first-line {
     font-size: 120%;
     font-weight: bold;
@@ -24,4 +25,50 @@ font-size: 120%;
 }
 .box::before {
     content: "通过css语句::before添加的内容：";
+}
+
+
+body,
+html {
+    font-family: sans-serif;
+}
+
+ul {
+    padding: 0;
+    width: 100%;
+}
+
+li {
+    display: inline;
+}
+
+.button a {
+    outline: none;
+    text-decoration: none;
+    display: inline-block;
+    width: 15%;
+    margin-right: 0px;
+    margin-left: 0px;
+    text-align: center;
+    line-height: 2.5;
+    color: black;
+}
+
+li:last-child a {
+    margin-right: 0;
+}
+
+a:link,
+a:visited,
+a:focus {
+    background: yellow;
+}
+
+a:hover {
+    background: orange;
+}
+
+a:active {
+    background: red;
+    color: white;
 }

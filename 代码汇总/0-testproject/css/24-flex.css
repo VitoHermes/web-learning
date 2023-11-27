@@ -1,0 +1,62 @@
+ html {
+     font-family: sans-serif;
+ }
+
+ body {
+     margin: 0px;
+ }
+
+
+
+ header {
+     background: purple;
+     height: 100px;
+ }
+
+ h1 {
+     text-align: center;
+     color: white;
+     line-height: 100px;
+     margin: 0;
+ }
+
+ article {
+     padding: 10px;
+     margin: 10px;
+     background: aqua;
+     /* flex: 200px; 最小宽度*/
+     flex: 1 150px;
+ }
+
+ article:nth-of-type(even) {
+     flex: 2 200px;
+ }
+
+ section {
+     display: flex;
+     flex-wrap: wrap;
+ }
+
+
+
+ button {
+     font-size: 18px;
+     line-height: 1.5;
+     width: 18%;
+ }
+
+ .button_bar {
+    display: flex;
+    align-items: center; /*控制 flex 项在交叉轴上的位置*/
+    justify-content: space-around; /*控制 flex 项在主轴上的位置。*/
+    /*它会使所有 flex 项沿着主轴均匀地分布，在任意一端都会留有一点空间。*/
+     height: 100px;
+     border: 1px solid black;
+     width: 70%;
+     max-width: 960px;
+     margin: 20px auto;
+ }
+
+ button:first-child {
+     order: 0; /*所有 flex 项默认的 order 值是 0。改变order数值越大越靠后*/
+ }

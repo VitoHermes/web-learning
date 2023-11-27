@@ -1,0 +1,39 @@
+        body {
+            width: 90%;
+            max-width: 900px;
+            margin: 2em auto;
+            font: .9em/1.2 Arial, Helvetica, sans-serif;
+        }
+
+        .container>div {
+            border-radius: 5px;
+            padding: 10px;
+            background-color: rgb(207, 232, 220);
+            border: 2px solid rgb(79, 185, 227);
+        }
+
+        .container {
+            display: grid;
+            /*grid-template-columns: 200px 200px 200px;*/
+            /*grid-template-columns: 30% 30% 30%;*/
+
+            /*创建3个等宽轨道*/
+            /*
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-columns: repeat(3, 1fr);
+            */
+            /*自动多列填充*/
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            grid-auto-rows: minmax(100px, auto);
+
+            /*fr可以与一般的长度单位混合使用。比如设置
+            grid-template-columns: 300px 2fr 1fr，
+            那么第一列宽度是300px，剩下的两列会根据剩余的可用空间按比例分配。*/
+
+            /*grid-row-gap 行间隙，grid-column-gap 列间隙 */
+            grid-row-gap: 20px;
+            grid-column-gap: 10px;
+            row-gap: 20px;
+            column-gap: 10px;
+
+        }

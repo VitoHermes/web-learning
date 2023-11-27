@@ -1,3 +1,6 @@
+.body {
+    width: 80%;
+}
 .wrapper {
     display: flex;
     flex-direction: row-reverse;

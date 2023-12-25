@@ -26,8 +26,8 @@ body {
 }
 
 #result {
-    overflow: hidden;
-    resize: none;
+    overflow: scroll;
+    resize: none; /*禁止拖动*/
     width: auto;
     height: 30px;
     text-align: center;
@@ -44,7 +44,7 @@ body {
     margin: auto 5px;
 }
 
-#swap:hover {
+#swap:hover {/*hover的时候旋转*/
     animation-name: turn;
     animation-fill-mode: forwards;
 }
@@ -55,7 +55,7 @@ body {
     }
 }
 
-.functional-part {
+.functional-part {/*垂直分布，居中*/
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -92,16 +92,16 @@ body {
 .amount {
      width: 45%;
      height: 40px;
-     font-size: x-large;
+     font-size: large;
      font-weight: bolder;
      padding-left: 20px;
      background-color: rgb(214, 213, 213);
 }
 
 .footer {
-    text-align: center;
-    margin-top: 30px;
-    font-weight: bold;
+    text-align: center; /*居中*/
+    margin-top: 30px; /*距离顶部30px*/
+    font-weight: bold; /*加粗*/
 }
 
 a {
@@ -109,7 +109,8 @@ a {
     font-weight: bolder;
 }
 
-@media (max-width: 420px) {
+ @media screen and (max-width: 600px) {
+
     .title {
         font-size:24px ;
     }

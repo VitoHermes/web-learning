@@ -13,46 +13,47 @@
 </head>
 
 <body>
-    <div class="text-part">
-        <img src="./Images/image1.png" alt="更换不同币种" class="logo">
-        <h1 class="title">汇率计算器</h1>
-        <p class="some-text">请选择兑换的货币类型</p>
-    </div>
-
-    <div class="functional-part">
-        <div class="head-div">
-            <!--选择初始币种-->
-            <select class="currency" id="currency-one">
-                <option value="USD" selected>美元</option>
-                <option value="AUD">澳币</option>
-                <option value="CNY">人民币</option>
-                <option value="EUR">欧元</option>
-                <option value="HKD">港币</option>
-                <option value="JPY">日元</option>
-
-            </select>
-            <img src="./Images/exchange.png" tabindex="0" onkeydown="swap.onclick()" alt="exchange icon" id="swap">
-            <!--选择兑换后币种-->
-            <select class="currency" id="currency-two">
-                <option value="USD">美元</option>
-                <option value="AUD">澳币</option>
-                <option value="CNY" selected>人民币</option>
-                <option value="EUR">欧元</option>
-                <option value="HKD">港币</option>
-                <option value="JPY">日元</option>
-            </select>
+    <div class="main-area">
+        <div class="text-part">
+            <img src="./Images/image1.png" alt="更换不同币种" class="logo">
+            <h1 class="title">汇率计算器</h1>
+            <p class="some-text">请选择兑换的货币类型</p>
         </div>
-        <div class="body-div">
-            <input class="amount" type="number" value="1" placeholder="输入兑换金额" id="amount-one">
-            <input class="amount" type="number" placeholder="兑换后价值" id="amount-two">
+
+        <div class="functional-part">
+            <div class="head-div">
+                <!--选择初始币种-->
+                <select class="currency" id="currency-one">
+                    <option value="USD" selected>美元</option>
+                    <option value="AUD">澳币</option>
+                    <option value="CNY">人民币</option>
+                    <option value="EUR">欧元</option>
+                    <option value="HKD">港币</option>
+                    <option value="JPY">日元</option>
+
+                </select>
+                <img src="./Images/exchange.png" tabindex="0" onkeydown="swap.onclick()" alt="exchange icon" id="swap">
+                <!--选择兑换后币种-->
+                <select class="currency" id="currency-two">
+                    <option value="USD">美元</option>
+                    <option value="AUD">澳币</option>
+                    <option value="CNY" selected>人民币</option>
+                    <option value="EUR">欧元</option>
+                    <option value="HKD">港币</option>
+                    <option value="JPY">日元</option>
+                </select>
+            </div>
+            <div class="body-div">
+                <input class="amount" type="number" value="1" placeholder="输入兑换金额" id="amount-one">
+                <input class="amount" type="number" placeholder="兑换后价值" id="amount-two">
+            </div>
+            <textarea readonly id="result" cols="30" rows="10" placeholder="汇率结果"></textarea>
         </div>
-        <textarea readonly id="result" cols="30" rows="10" placeholder="汇率结果"></textarea>
+
+        <footer>
+            <p class="footer">&copy Created by Chris Davis</a> </p>
+        </footer>
     </div>
-
-    <footer>
-        <p class="footer">&copy Created by Chris Davis</a> </p>
-    </footer>
-
     <script src="./script.js"></script>
 </body>
 

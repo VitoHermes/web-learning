@@ -3,19 +3,24 @@
 
 body {/*类型选择器*/
     font-size: 20px;
+    justify-content: center;
 }
 
 .head { /*类选择器*/
     background-color: rebeccapurple;
-    width: 80%;
+    align-items: center;
+    text-align: center;
     border: 2px black solid;
     border-radius: 5px;
-    margin: 5px;
-    padding: 10px;
+    height: 30px;
+    margin-bottom: 10px;
+    padding: 5px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 30px;
+    font-size: 15px;
     color: white;
-
+}
+.head-title {
+    margin: auto 0;
 }
 
 #123 {/*id选择器*/
@@ -39,21 +44,21 @@ a[href｜="pages/10-h5.html"] {/*以什么开始匹配*/
 }
 
 .main-area {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px;
     width: 80%;
     border: 1px solid black;
     border-radius: 5px;
-    margin: 5px;
+    margin: 10px auto;
     padding: 10px;
 }
 
-.main_area2 {
-    width: 80%;
-    border: 1px solid black;
-    border-radius: 5px;
-    margin: 5px;
+.area {
+    border: 1px black solid;
+    border-radius: 10px;
     padding: 10px;
 }
-
 .notion {
     font-size: 14px;
     padding: 10px;

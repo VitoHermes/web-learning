@@ -6,25 +6,25 @@ const swap = document.getElementById('swap')
 const result = document.getElementById('result')
 
 
-function calculate (){
-const first_currency = currencyE1.value;
-const second_currency = currencyE2.value;
+function calculate() {
+    const first_currency = currencyE1.value;
+    const second_currency = currencyE2.value;
 
-//request data from the given API using fetch()
+    //request data from the given API using fetch()
 
-fetch(`https://api.exchangerate-api.com/v4/latest/${first_currency}`)
+    fetch(`https://api.exchangerate-api.com/v4/latest/${first_currency}`)
 
-//Since the response might be anything, we convert it into JSON Object and then use it for our purpose
-.then (res => res.json())
-.then (data => {
-    const rate = data.rates[second_currency];
-    console.log(first_currency, second_currency, rate)
-    result.innerText = `1 ${first_currency} = ${rate} ${second_currency}`
-    amountE2.value = (amountE1.value * rate).toFixed(2)
-})
+        //Since the response might be anything, we convert it into JSON Object and then use it for our purpose
+        .then(res => res.json())
+        .then(data => {
+            const rate = data.rates[second_currency];
+            console.log(first_currency, second_currency, rate)
+            result.innerText = `1 ${first_currency} = ${rate} ${second_currency}`
+            amountE2.value = (amountE1.value * rate).toFixed(2)
+        })
 }
 
-swap.onclick = function(){
+swap.onclick = function () {
     const temp = currencyE1.value;
     currencyE1.value = currencyE2.value;
     currencyE2.value = temp;

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p {
+            font-family: "helvetica neue", helvetica, sans-serif;
+            /*字体*/
+            letter-spacing: 1px;
+            /*字间距*/
+            text-transform: uppercase;
+            /*全部变为大写*/
+            text-align: center;
+            /*文本居中*/
+            border: 1px solid rgb(0 0 200 / 0.6);
+            /*边框*/
+            background: rgb(0 0 200 / 0.6);
+            /*背景颜色*/
+            color: rgb(255 255 255 / 1);
+            /*字体颜色*/
+            box-shadow: 1px 1px 2px rgba(31, 31, 31, 0.4);
+            /*阴影*/
+            border-radius: 5px;
+            /*圆角*/
+            padding: 3px 10px;
+            /*内间距*/
+            display: inline-block;
+            /*变为内联模型（模拟了button）*/
+            cursor: pointer;
+            /*hover手势*/
+        }
+    </style>
+    <script src="../js/js-1.js" defer></script> <!--添加js文件-->
+
+</head>
+
+<body>
+    <h3>js 第一课</h3>
+    <p id="button-1">Play 1:Chris</p>
+    <article>
+        在变量中储存有用的值。比如上文的示例中，我们请求客户输入一个新名字，然后将其储存到 name 变量中。 <br/>
+        操作一段文本（在编程中称为“字符串”（string））。上文的示例中，我们取字符串“玩家 1：”，
+        然后把它和 name 变量拼接起来，创造出完整的文本标签，比如“玩家 1：小明”。<br />
+        运行代码以响应网页中发生的特定事件。上文的示例中，我们用一个 click 事件来检测按钮什么时候被点击，然后运行代码更新文本标签。<br/>
+        JavaScript 的一个非常常见的用途是通过文档对象模型 API（如上所述）动态修改 HTML 和 CSS，以更新用户界面。请注意，网页文档中的代码通常按照其在页面上出现的顺序加载和执行。如果 JavaScript 先于要修改的
+        HTML 和 CSS 加载和运行，则可能发生错误
+    </article>
+    <button>Click me</button>
+    <button>Click me</button>
+    <button>Click me</button>
+    <button>Click me</button>
+</body>
+
+</html>

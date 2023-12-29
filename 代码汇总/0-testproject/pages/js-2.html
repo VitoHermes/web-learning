@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/js-2.css">
+    <script src="../js/js-2.js" defer></script>
+</head>
+
+<body>
+    <h3>Number guessing game</h3>
+    <p>We have selected a random number between 1 and 100. See if you can guess it in 10 turns or fewer. We'll tell you
+        if your
+        guess was too high or too low.
+    </p>
+    <div class="guessArea">
+        <p>Enter a guess:</p>
+        <input type="number" min="1" max="100" required id="guessField" class="guessField">
+        <input type="submit" value="Submit guess" class="guessSubmit">
+    </div>
+    <div class="resultParas">
+        <p class="guesses-min"></p> <!--最小的值-->
+        <p class="guesses-max"></p> <!--最大的值-->
+        <p class="lastResult"></p> <!--最后的结果-->
+        <p class="lowOrHi"></p> <!--高或者低-->
+    </div>
+
+
+</body>
+
+</html>

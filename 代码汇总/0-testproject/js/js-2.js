@@ -28,13 +28,15 @@ const guessesMin = document.querySelector(".guesses-min");
 const guessesMax = document.querySelector(".guesses-max");
 const lastResult = document.querySelector('.lastResult');
 const lowOrHi = document.querySelector('.lowOrHi');
-
+console.log(lowOrHi);
 const guessSubmit = document.querySelector(".guessSubmit");
 const guessField = document.querySelector(".guessField");
 
 //let 创建变量，猜测次数和重置按钮
 let guessCount = 1;
 let resetButton;
+
+guessField.focus(); //自动定位到输入框
 
 function checkGuess() {
     const userGuess = Number(guessField.value);

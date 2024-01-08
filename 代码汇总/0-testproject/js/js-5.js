@@ -24,3 +24,14 @@ function draw() {
 }
 
 btn.addEventListener("click", draw);
+
+const myArray = ["我", "爱", "巧克力", "青蛙"];
+const madeAString = myArray.join(" ");
+console.log(madeAString);
+// 返回 '我 爱 巧克力 青蛙'
+
+const madeAnotherString = myArray.join();
+console.log(madeAnotherString);
+// 返回 '我,爱,巧克力,青蛙'
+
+

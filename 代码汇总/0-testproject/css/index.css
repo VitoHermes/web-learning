@@ -26,6 +26,8 @@ body {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 15px;
     color: white;
+    position: sticky;
+    top: 0px;
 }
 
 .head-title {
@@ -48,20 +50,15 @@ a[class] {
     font-size: 20px;
 }
 
-a[href="pages/10-h5.html"] {
-    /*完全匹配*/
+/*a[href="pages/10-h5.html"] {
+    完全匹配
     font-size: 20px;
-}
+}*/
 
-a[href～="pages/10-h5.html"] {
-    /*包含匹配*/
+ /*a[href～="pages/10-h5.html"] {
+   包含匹配
     font-size: 20px;
-}
-
-a[href｜="pages/10-h5.html"] {
-    /*以什么开始匹配*/
-    font-size: 100px;
-}
+}*/
 
 .main-area {
     display: flex;

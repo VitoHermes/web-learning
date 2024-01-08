@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Useful event target example</title>
+    <style>
+        .tile {
+            height: 100px;
+            width: 25%;
+            float: left;
+        }
+
+        canvas {
+            width: 90%;
+            height: 400px;
+            border: 1px solid black;
+        }
+
+        p {
+            color: purple;
+            margin: 0.5em 0;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        button {
+            display: block;
+            margin: 20px 0 20px 20px;
+        }
+
+        .button-bar {
+            padding: 20px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="preview">
+    </section>
+
+    <div class="button-bar">
+        <button data-color="red">Red</button>
+        <button data-color="yellow">Yellow</button>
+        <button data-color="green">Green</button>
+        <button data-color="purple">Purple</button>
+    </div>
+
+    <div id="container">
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+    </div>
+    <canvas></canvas>
+    <button class="off">Machine is off</button>
+    <script>
+        function random(number) {
+            return Math.floor(Math.random() * number);
+        }
+
+        function bgChange() {
+            const rndCol = `rgb(${random(255)}, ${random(255)}, ${random(255)})`;
+            return rndCol;
+        }
+
+        const container = document.querySelector('#container'); // 建立了一个事件委托
+        container.addEventListener('click', event => event.target.style.backgroundColor = bgChange());
+        // event.target 表示触发事件的元素。在这里，它指的是被点击的元素。
+
+        const btn = document.querySelector('.off');
+        function changeText() {
+            if (btn.textContent == 'Machine is off') {
+                btn.textContent = 'Machine is on';
+            } else if (btn.textContent == 'Machine is on') {
+                btn.textContent = 'Machine is off';
+            }
+        }
+        btn.addEventListener('click', changeText);
+
+        //获取键盘事件来画圆形
+        const canvas = document.querySelector('canvas');
+        const ctx = canvas.getContext('2d');
+
+        function drawCircle(x, y, size) {
+            ctx.fillStyle = 'white';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            ctx.beginPath();
+            ctx.fillStyle = 'black';
+            ctx.arc(x, y, size, 0, 2 * Math.PI);
+            ctx.fill();
+        }
+
+        let x = 50;
+        let y = 50;
+        const size = 10;
+
+        drawCircle(x, y, size);
+        document.addEventListener('keydown', (event) => {
+            const moveAmount = 10;
+            switch (event.key) {
+                case 'w':
+                    y -= moveAmount;
+                    break;
+                case 's':
+                    y += moveAmount;
+                    break;
+                case 'a':
+                    x -= moveAmount;
+                    break;
+                case 'd':
+                    x += moveAmount;
+                    break;
+                default:
+                    break;
+            }
+            drawCircle(x, y, size);
+        })
+
+        // 按钮任务
+        const buttonBar = document.querySelector('.button-bar');
+        buttonBar.addEventListener('click', event => {
+            if (event.target.tagName === 'BUTTON') { //校验点击的是否是按钮
+                event.target.style.backgroundColor = event.target.getAttribute('data-color');
+                document.body.style.backgroundColor = event.target.getAttribute('data-color');
+            }
+        });
+    </script>
+</body>
+
+</html>

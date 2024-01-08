@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions: Task 1</title>
+    <style>
+        p {
+            color: purple;
+            margin: 0.5em 0;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+        section {
+            display: flex;
+        }
+    </style>
+</head>
+
+<body>
+    <button>click me!</button>
+    <section class="preview">
+
+
+
+    </section>
+
+</body>
+<script>
+    const names = ['Chris', 'Li Kang', 'Anne', 'Francesca', 'Mustafa', 'Tina', 'Bert', 'Jada']
+
+
+    // Add your code here
+    function chooseName() {
+
+        const para = document.createElement('p');
+        const index = Math.floor(Math.random() * names.length); // 随机取一个0-长度的数字，作为索引
+        console.log(index);
+        const data = names[index];
+        para.textContent = data;
+        const section = document.querySelector('section');
+        section.appendChild(para);
+    }
+    // Don't edit the code below here!
+    const btn = document.querySelector('button');
+    btn.onclick = chooseName;
+
+</script>
+
+</html>

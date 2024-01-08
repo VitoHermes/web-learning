@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form>
+        <div>
+            <label for="fname">First name: </label>
+            <input id="fname" type="text" />
+        </div>
+        <div>
+            <label for="lname">Last name: </label>
+            <input id="lname" type="text" />
+        </div>
+        <div>
+            <input id="submit" type="submit" />
+        </div>
+    </form>
+    <p></p>
+</body>
+<!--提交按钮是一个类型为 submit 的 <input> 元素。当您点击提交按钮时，
+    浏览器默认会执行表单的提交操作，这导致页面刷新。-->
+<script>
+    const form = document.querySelector("form");
+    const fname = document.getElementById("fname");
+    const lname = document.getElementById("lname");
+    const para = document.querySelector("p");
+
+    form.addEventListener("submit", (e) => { //事件从被点击的最里面的元素冒泡而出。
+        if (fname.value === "" || lname.value === "") {
+            e.preventDefault();
+            para.textContent = "You need to fill in both names!";
+        } else {
+            para.textContent = fname.value + ' ' + lname.value;
+        }
+    });
+</script>
+
+</html>

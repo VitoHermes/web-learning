@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions: Task 2</title>
+    <style>
+        p {
+            color: purple;
+            margin: 0.5em 0;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        canvas {
+            border: 1px solid black;
+        }
+
+        .numbers {
+            display: flex;
+        }
+
+        .inputArea {
+            text-align: end;
+            margin: 20px;
+        }
+
+        .numbers p {
+            width: 50px;
+            margin: 5px;
+        }
+
+        .numbers input {
+            width: 200px;
+            margin: 5px;
+        }
+
+        .numbers select {
+            width: 200px;
+            margin: 5px;
+        }
+
+        .container {
+            display: flex;
+        }
+
+        .drawSubmit {
+            width: 100px;
+            margin-top: 20px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="inputArea">
+            <div class="numbers">
+                <p>x:</p>
+                <input type="number" min="0" max="100" required id="x" class="numbers" value="50">
+            </div>
+            <div class="numbers">
+                <p>y:</p>
+                <input type="number" min="0" max="100" required id="y" class="numbers" value="60">
+            </div>
+            <div class="numbers">
+                <p>width:</p>
+                <input type="number" min="0" max="100" required id="width" class="numbers" value="100">
+            </div>
+            <div class="numbers">
+                <p>height:</p>
+                <input type="number" min="0" max="100" required id="height" class="numbers" value="75">
+            </div>
+            <div class="numbers">
+                <p>color:</p>
+                <select id="color" class="numbers">
+                    <option>blue</option>
+                    <option>red</option>
+                </select>
+            </div>
+            <input type="submit" value="Submit" class="drawSubmit">
+        </div>
+
+        <canvas width="480" height="320">
+
+        </canvas>
+    </div>
+</body>
+<script>
+    //定位输入的内容
+    const x1 = document.querySelector('#x');
+    const y1 = document.querySelector('#y');
+    const wid = document.querySelector('#width');
+    const hei = document.querySelector('#height');
+    const color1 = document.querySelector('#color');
+
+    //定位按钮
+    const drawBtn = document.querySelector('.drawSubmit');
+
+    //定位画板
+    const canvas = document.querySelector('canvas');
+    const ctx = canvas.getContext('2d');
+
+    const x = 50;
+    const y = 60;
+    const width = 100;
+    const height = 75;
+    const color = 'blue';
+
+    function drawRectangle(canvas, ctx, x, y, width, height, color) {
+        // 清除画布
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+        // 绘制矩形
+        ctx.fillStyle = color;
+        ctx.fillRect(x, y, width, height);
+    }
+
+    //绘制图形
+    //drawRectangle(canvas, ctx, x, y, width, height, color);
+
+    // 点击按钮绘制图形
+    drawBtn.onclick = function() {
+        console.log(x1.value, y1.value, wid.value, hei.value, color1.value);
+        drawRectangle(canvas, ctx, x1.value, y1.value, wid.value, hei.value, color1.value);
+    }
+
+</script>
+
+</html>

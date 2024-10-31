@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full stack web tutorial</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/logo.png" alt="Web">
+            <span>Web tutorial</span>
+        </div>
+        <nav class="top-nav">
+            <a href="#" class="nav-item active">HTML</a>
+            <a href="#" class="nav-item">CSS</a>
+            <a href="#" class="nav-item">JavaScript</a>
+            <div class="search-box">
+                <input type="text" placeholder="搜索...">
+                <button type="submit">🔍</button>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <nav class="sidebar">
+            <div class="sidebar-header">
+                <h2>HTML Tutorial</h2>
+                <button class="menu-toggle">☰</button>
+            </div>
+            <div class="sidebar-content">
+                <div class="tutorial-section">
+                    <h3>HTML Basic</h3>
+                    <a href="pages/html-intro.html" class="active" onclick="return loadPage(this)">HTML Introduction</a>
+                    <a href="pages/html-basic.html" onclick="return loadPage(this)">HTML Basic</a>
+                    <a href="pages/html-elements.html" onclick="return loadPage(this)">HTML Elements</a>
+                    <a href="pages/html-attributes.html" onclick="return loadPage(this)">HTML Attributes</a>
+                </div>
+                <div class="tutorial-section">
+                    <h3>HTML Forms</h3>
+                    <a href="pages/html-forms.html">HTML Forms</a>
+                    <a href="pages/html-formattributes.html">HTML Form Attributes</a>
+                </div>
+                <div class="tutorial-section">
+                    <h3>HTML Graphics</h3>
+                    <a href="pages/html-headings.html">HTML Forms</a>
+                    <a href="pages/html-paragraphs.html">HTML Form Attributes</a>
+                </div>
+                <div class="tutorial-section">
+                    <h3>HTML Media</h3>
+                    <a href="pages/html-headings.html">HTML Forms</a>
+                    <a href="pages/html-paragraphs.html">HTML Form Attributes</a>
+                </div>
+                <div class="tutorial-section">
+                    <h3>HTML APIs</h3>
+                    <a href="pages/html-headings.html">HTML Forms</a>
+                    <a href="pages/html-paragraphs.html">HTML Form Attributes</a>
+                </div>
+            </div>
+        </nav>
+
+        <main class="content">
+            <iframe id="content-frame" name="content-frame" src="pages/html-intro.html"></iframe>
+        </main>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,127 +1,94 @@
-/*选择器类型*/
-/*类型、类和 ID 选择器*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Microsoft YaHei', sans-serif;
+}
 
 body {
-    /*类型选择器*/
-    justify-content: center;
-    font-size: 18px;
+    background: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+.header {
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    color: white;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 .header p {
-    text-align: center;
-    font-family: sans-serif;
-    font-size: 30px;
-    margin: auto 0;
-    font:bolder;
+    font-size: 2rem;
+    font-weight: bold;
 }
-
-.head {
-    /*类选择器*/
-    background-color: rebeccapurple;
-    text-align: center;
-    border-radius: 5px;
-    height: 30px;
-    margin-bottom: 5px;
-    padding: 5px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 15px;
-    color: white;
-    position: sticky;
-    top: 0px;
-}
-
-.head-title {
-    display: flex;
-    height: 30px;
-    font-size: 20px;
-    align-items: center;
-    justify-content: center; /*水平居中*/
-    margin: 0 auto;
-}
-
-#123 {
-    /*id选择器*/
-    font-size: 10px;
-}
-
-/*存否和值选择器*/
-a[class] {
-    /*存否和值选择器，筛选出a且含有class属性的部分*/
-    font-size: 20px;
-}
-
-/*a[href="pages/10-h5.html"] {
-    完全匹配
-    font-size: 20px;
-}*/
-
- /*a[href～="pages/10-h5.html"] {
-   包含匹配
-    font-size: 20px;
-}*/
 
 .main-area {
-    display: flex;
-    flex-wrap: wrap;
-    width: 85%;
-    border: 1px solid rgb(120, 120, 120);
-    border-radius: 5px;
-    margin: 5px auto;
-    padding: 10px;
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
 }
 
 .rows {
-    padding: 5px;
-    margin: 5px;
-    flex: 1 200px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.rows:hover {
+    transform: translateY(-5px);
+}
+
+.head {
+    background: #2a5298;
+    padding: 1rem;
+}
+
+.head-title {
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
 }
 
 .area {
-    border: 1px black solid;
-    border-radius: 10px;
-    padding: 10px;
+    padding: 1.5rem;
 }
 
-.notion {
-    font-size: 14px;
-    padding: 10px;
-
-}
-
-/*移动端
-@media(max-width:600px) {
-    .head {
-        background-color: blue;
-    }
-
-    .main-area {
-        display: grid;
-        grid-template-rows: 1fr 1fr 1fr 1fr;
-        grid-gap: 10px;
-        width: 80%;
-        border: 1px solid black;
-        border-radius: 5px;
-        margin: 10px auto;
-        padding: 10px;
-    }
-    .row1 {
-
-    */
-
-a {
+.area a {
+    display: block;
+    color: #444;
     text-decoration: none;
-}
-a:link,
-/*伪类*/
-a:visited {
-    color: black;
-}
-
-a:hover {
-    text-decoration:underline;
-    color: blue;
+    padding: 0.8rem;
+    margin-bottom: 0.5rem;
+    border-radius: 5px;
+    transition: all 0.3s ease;
 }
 
-.main-area>a {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+.area a:hover {
+    background: #f0f0f0;
+    color: #2a5298;
+    padding-left: 1.2rem;
+}
+
+/* 移除所有的 <br> 标签，因为我们使用 display: block 和 margin 来控制间距 */
+.area br {
+    display: none;
+}
+
+/* 响应式设计调整 */
+@media (max-width: 768px) {
+    .header p {
+        font-size: 1.5rem;
+    }
+    
+    .main-area {
+        grid-template-columns: 1fr;
+    }
 }

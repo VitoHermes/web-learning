@@ -18,23 +18,37 @@
                 <h2 class="section-title">Your basic info</h2>
                 <div class="form-group">
                     <label for="firstName">First Name:</label>
+                    <!-- Input for first name -->
                     <input type="text" id="firstName" name="firstName" class="form-control" required>
                 </div>
                 <div class="form-group">
                     <label for="lastName">Last Name:</label>
+                    <!-- Input for last name -->
                     <input type="text" id="lastName" name="lastName" class="form-control" required>
                 </div>
                 <div class="form-group">
                     <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" class="form-control" required>
+                    <!-- Input for email with pattern validation -->
+                    <input type="email" id="email" name="email" class="form-control" required
+                           pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" 
+                           title="Please enter a valid email address">
                 </div>
                 <div class="form-group">
                     <label for="username">Username:</label>
+                    <!-- Input for username -->
                     <input type="text" id="username" name="username" class="form-control" required>
                 </div>
                 <div class="form-group">
                     <label for="password">Password:</label>
-                    <input type="password" id="password" name="password" class="form-control" required>
+                    <!-- Input for password with minimum length validation -->
+                    <input type="password" id="password" name="password" class="form-control" required
+                           pattern=".{8,}" 
+                           title="password must be at least 8 characters long">
+                </div>
+                <div class="form-group">
+                    <label for="confirmPassword">Confirm Password:</label>
+                    <!-- Input for confirming password -->
+                    <input type="password" id="confirmPassword" name="confirmPassword" class="form-control" required>
                 </div>
             </div>
 
@@ -42,11 +56,13 @@
                 <h2 class="section-title">Other details</h2>
                 <div class="form-group">
                     <label for="birthday">Birth Date:</label>
+                    <!-- Input for birth date -->
                     <input type="date" id="birthday" name="birthday" class="form-control" required>
                 </div>
                 
                 <div class="form-group">
                     <label>Gender:</label>
+                    <!-- Radio buttons for gender selection -->
                     <div class="gender-options">
                         <div class="radio-item">
                             <input type="radio" id="male" name="gender" value="male" checked>
@@ -65,20 +81,37 @@
 
                 <div class="form-group">
                     <label for="country">Country:</label>
+                    <!-- Dropdown for country selection -->
                     <select id="country" name="country" class="form-control" required>
                         <option value="usa">United States</option>
                         <option value="canada">Canada</option>
                         <option value="china">China</option>
                     </select>
                 </div>
+                <div class="form-group">
+                    <label for="profession">Profession:</label>
+                    <!-- Dropdown for profession selection -->
+                    <select id="profession" name="profession" class="form-control" required>
+                        <option value="data_analytics">Data Analytics</option>
+                        <option value="ui_ux_design">UI/UX Design</option>
+                        <option value="others">Others</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="about_yourself">About yourself:</label>
+                    <!-- Textarea for additional information -->
+                    <textarea id="about_yourself" name="about_yourself" class="form-control" required></textarea>
+                </div>
             </div>
 
             <div class="form-group terms-group">
+                <!-- Checkbox for agreeing to terms and conditions -->
                 <input type="checkbox" id="terms" name="terms" required>
                 <label for="terms">I agree to the <a href="#" class="terms-link">terms and conditions</a></label>
             </div>
 
             <div class="form-group">
+                <!-- Submit button for the form -->
                 <button type="submit" class="submit-btn">Sign Up</button>
             </div>
         </form>

@@ -15,7 +15,7 @@ This project is a basic web development tutorial aimed at helping beginners get 
 
 ## Installation
 1.Clone the repository
-git clone https://github.com/your-username/web-tutorial.git
+git clone https://github.com/VitoHermes/web-learning.git
 cd web-tutorial
 2.Open the project
 Open the project folder in your text editor.

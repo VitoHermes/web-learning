@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f5f5;
+    color: #353535;
+    line-height: 1.6;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    margin: 10px auto;
+    min-height: 100vh;
+}
+
+.registration-form {
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+}
+
+.form-header {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #2c3e50;
+}
+
+.form-title {
+    color: #163b5f;
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.section-title {
+    color: #416080;
+    font-size: 1.2em;
+    margin: 20px 0;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #eee;
+}
+
+.section-title::before {
+    content: '•';
+    margin-right: 8px;
+    color: #416080;
+    font-size: 1.2em;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.form-control {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: #3498db;
+    outline: none;
+}
+
+.gender-options {
+    display: flex;
+    gap: 20px;
+}
+
+.radio-item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.terms-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: auto;
+    margin-bottom: 20px;
+}
+
+.terms-link {
+    color: #3498db;
+    text-decoration: none;
+}
+
+.terms-link:hover {
+    text-decoration: underline;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #2980b9;
+}
+
+@media (max-width: 480px) {
+    .registration-form {
+        padding: 20px;
+    }
+    
+    .gender-options {
+        flex-direction: column;
+        gap: 10px;
+    }
+}

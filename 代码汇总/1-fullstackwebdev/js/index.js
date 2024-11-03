@@ -1,4 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // 初始化侧边栏切换功能
+    setupSidebarToggle();
+    
     // 移动端菜单切换
     document.querySelector('.menu-toggle')?.addEventListener('click', () => {
         document.querySelector('.sidebar').classList.toggle('active');
@@ -57,6 +60,54 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelector('.nav-item').click();
 });
 
+// 设置侧边栏折叠功能
+function setupSidebarToggle() {
+    const menuToggle = document.querySelector('.menu-toggle');
+    const sidebar = document.querySelector('.sidebar');
+    const content = document.querySelector('.content');
+    
+    // 切换侧边栏状态
+    function toggleSidebar() {
+        if (window.innerWidth <= 768) {
+            // 移动端逻辑
+            sidebar.classList.toggle('active');
+        } else {
+            // 桌面端逻辑
+            sidebar.classList.toggle('collapsed');
+            // 强制重新计算布局
+            requestAnimationFrame(() => {
+                if (sidebar.classList.contains('collapsed')) {
+                    content.style.width = 'calc(100% - 60px)';
+                } else {
+                    content.style.width = 'calc(100% - 250px)';
+                }
+            });
+        }
+    }
+
+    // 按钮点击事件
+    if (menuToggle) {
+        menuToggle.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            toggleSidebar();
+        });
+    }
+
+    // 监听窗口大小变化
+    window.addEventListener('resize', () => {
+        if (window.innerWidth > 768) {
+            sidebar.classList.remove('active');
+            // 根据折叠状态设置内容宽度
+            content.style.width = sidebar.classList.contains('collapsed') 
+                ? 'calc(100% - 60px)' 
+                : 'calc(100% - 250px)';
+        } else {
+            content.style.width = '100%';
+        }
+    });
+}
+
 // 页面加载函数
 function loadPage(link) {
     if (!link) return false;
@@ -95,7 +146,10 @@ function loadPage(link) {
     
     // 移动端视图下关闭侧边栏
     if (window.innerWidth <= 768) {
-        document.querySelector('.sidebar').classList.remove('active');
+        const sidebar = document.querySelector('.sidebar');
+        const overlay = document.querySelector('.sidebar-overlay');
+        if (sidebar) sidebar.classList.remove('active');
+        if (overlay) overlay.classList.remove('active');
     }
     
     return false;

@@ -14,22 +14,24 @@ This project is a simple example to help beginners learn basic web development s
 This project is a basic web development tutorial aimed at helping beginners get started quickly. Through this project, you'll learn how to create an HTML page, style it with CSS, and add interactivity using JavaScript.
 
 ## Installation
-1.Clone the repository
-git clone https://github.com/VitoHermes/web-learning.git
-cd web-tutorial
-2.Open the project
-Open the project folder in your text editor.
+1. Clone the repository
+   ```bash
+   git clone https://github.com/VitoHermes/web-learning.git
+   cd web-tutorial
+   ```
+2. Open the project
+   Open the project folder in your text editor.
 
-3.Start the project
-Open the index.html file in your browser to view the tutorial project.
+3. Start the project
+   Open the `index.html` file in your browser to view the tutorial project.
 
 ## Project Structure
 web-tutorial/
-├── index.html         # Main HTML file
+├── index.html         # Homepage with four modules: HTML, CSS, JavaScript, and Projects
 ├── css/
-│   └── style.css      # CSS file
+│   └── index.css      # CSS file
 ├── js/
-│   └── script.js      # JavaScript file
+│   └── index.js      
 └── README.md          # Project description
 - index.html - The main HTML file, containing the basic structure of the project.
 - css/style.css - This file contains styles for the project to enhance the page’s appearance.

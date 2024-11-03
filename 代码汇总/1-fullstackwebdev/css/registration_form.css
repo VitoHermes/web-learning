@@ -1,3 +1,4 @@
+/* registration form style */
 * {
     margin: 0;
     padding: 0;
@@ -47,6 +48,7 @@ body {
     border-bottom: 2px solid #eee;
 }
 
+/* add a bullet point before the section title */
 .section-title::before {
     content: '•';
     margin-right: 8px;

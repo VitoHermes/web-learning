@@ -57,7 +57,13 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // 初始化显示HTML部分
-    document.querySelector('.nav-item').click();
+    const initialNavItem = document.querySelector('.nav-item');
+    if (initialNavItem) {
+        initialNavItem.click();
+    }
+
+    // 根据URL定位到二级菜单
+    activateMenuFromURL();
 });
 
 // 设置侧边栏折叠功能
@@ -153,6 +159,18 @@ function loadPage(link) {
     }
     
     return false;
+}
+
+// 根据URL激活菜单
+function activateMenuFromURL() {
+    const path = window.location.pathname;
+    const pageName = path.substring(path.lastIndexOf('/') + 1, path.lastIndexOf('.'));
+    if (pageName) {
+        const targetLink = document.querySelector(`.sidebar-content a[href*="${pageName}"]`);
+        if (targetLink) {
+            targetLink.click();
+        }
+    }
 }
 
 // 简化的错误处理

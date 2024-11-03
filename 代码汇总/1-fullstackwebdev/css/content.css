@@ -1,4 +1,4 @@
-/* 内容页面的样式 */
+/* content style */
 body {
     margin: 0;
     padding: 2rem;
@@ -24,7 +24,7 @@ h2 {
     padding: 0;
 }
 
-/* 表格样式 */
+/* table style */
 table {
     width: 90%;
     border-collapse: collapse;
@@ -43,7 +43,7 @@ tr:hover {
     background-color: #ddd;
 }
 
-/*图片样式*/
+/* image style */
 img {
     width: 80%;
     height: auto;
@@ -88,7 +88,7 @@ ul {
     margin: 1rem 0;
 }
 
-/* example 样式 */
+/* example style */
 .example-box {
     padding: 8px 20px;
     margin: 1rem 0;

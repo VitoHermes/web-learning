@@ -124,11 +124,12 @@ body {
     background-color: #2980b9;
 }
 
+/* responsive design */
 @media (max-width: 480px) {
     .registration-form {
         padding: 20px;
     }
-    
+    /* responsive design for gender options */
     .gender-options {
         flex-direction: column;
         gap: 10px;

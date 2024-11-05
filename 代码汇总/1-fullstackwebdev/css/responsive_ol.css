@@ -1,0 +1,106 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    --h: 212deg;
+    --l: 43%;
+    --brandColor: hsl(var(--h), 71%, var(--l));
+    /* 这段代码使用了 CSS 自定义属性（也称为 CSS 变量）和 HSL 颜色模型来定义颜色。
+    --h: 212deg; 定义了一个自定义属性 --h，表示色相（Hue），值为 212 度。在 HSL 颜色模型中，色相是一个角度，
+    范围从 0 到 360 度，表示颜色在色轮上的位置。212 度通常是蓝色调。
+    --l: 43%; 定义了另一个自定义属性 --l，表示亮度（Lightness），值为 43%。亮度决定了颜色的明暗程度，
+    0% 是黑色，100% 是白色。
+    --brandColor: hsl(var(--h), 71%, var(--l)); 定义了一个名为 --brandColor 的自定义属性，
+    使用 HSL 颜色模型来生成颜色。hsl() 函数接受三个参数：色相、饱和度（Saturation）、亮度。
+    这里使用了前面定义的 --h 和 --l 变量，并将饱和度设为 71%。 */
+    font-family: Montserrat, sans-serif;
+    margin: 0;
+    background-color: whitesmoke;
+  }
+  
+  p {
+    margin: 0;
+    line-height: 1.6;
+  }
+  
+  ol {
+    list-style: none;
+    counter-reset: list; 
+    /* 定义计数器，名字是list */
+    padding: 0 1rem;
+  }
+  
+  li {
+    --stop: calc(100% / var(--length) * var(--i));
+    /* 计算每个li的占比 */
+    --l: 62%;
+    --l2: 88%;
+    --h: calc((var(--i) - 1) * (180 / var(--length)));
+    --c1: hsl(var(--h), 71%, var(--l));
+    --c2: hsl(var(--h), 71%, var(--l2));
+  
+    position: relative;
+    counter-increment: list;
+    max-width: 45rem;
+    margin: 2rem auto;
+    padding: 2rem 1rem 1rem;
+    box-shadow: 0.1rem 0.1rem 1.5rem rgba(0, 0, 0, 0.3);
+    border-radius: 0.25rem;
+    overflow: hidden;
+    background-color: white;
+  }
+  
+  li::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(
+      to right,
+      var(--c1) var(--stop),
+      var(--c2) var(--stop)
+    );
+  }
+  
+  h3 {
+    display: flex;
+    align-items: baseline;
+    margin: 0 0 1rem;
+    color: rgb(70, 70, 70);
+  }
+  
+  h3::before {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 0 0 auto;
+    margin-right: 1rem;
+    width: 3rem;
+    height: 3rem;
+    content: counter(list);
+    padding: 1rem;
+    border-radius: 50%;
+    background-color: var(--c1);
+    color: white;
+  }
+  
+  @media (min-width: 40em) {
+    li {
+      margin: 3rem auto;
+      padding: 3rem 2rem 2rem;
+    }
+  
+    h3 {
+      font-size: 2.25rem;
+      margin: 0 0 2rem;
+    }
+  
+    h3::before {
+      margin-right: 1.5rem;
+    }
+  }
+  

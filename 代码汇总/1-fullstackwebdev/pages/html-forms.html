@@ -1,12 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML Forms</title>
     <link rel="stylesheet" href="../css/content.css">
 </head>
+
 <body>
     <h1>HTML Forms</h1>
+    <p>HTML forms are used to collect user input. They are essential for creating interactive web pages.</p>
+    <table style="width: 100%; border-collapse: collapse;">
+        <colgroup>
+            <col style="width: 30%;">
+            <col style="width: 70%;">
+        </colgroup>
+        <tr>
+            <td style="font-weight: bold;">Type</td>
+            <td style="font-weight: bold;">Description</td>
+        </tr>
+        <tr>
+            <td>&lt;input type="text"&gt;</td>
+            <td>Displays a single-line text input field</td>
+        </tr>
+        <tr>
+            <td>&lt;input type="radio"&gt;</td>
+            <td>Displays a radio button (for selecting one of many choices)</td>
+        </tr>
+        <tr>
+            <td>&lt;input type="checkbox"&gt;</td>
+            <td>Displays a checkbox (for selecting zero or more of many choices)</td>
+        </tr>
+        <tr>
+            <td>&lt;input type="submit"&gt;</td>
+            <td>Displays a submit button (for submitting the form)</td>
+        </tr>
+        <tr></tr>
+        <td>&lt;input type="button"&gt;</td>
+        <td>Displays a clickable button</td>
+        </tr>
+    </table>
+    <div class="example-box">   
+        <h2>Example</h2>
+        <div class="sub_title">text input</div>
+        <form action="../js/action_page.php">
+            <div class="name_input" style="display: flex; flex-direction: column; gap: 10px;">
+                <label for="first_name">First Name:</label>
+                <input type="text" id="first_name" name="first_name" style="width: 200px;">
+                <label for="last_name">Last Name:</label>
+                <input type="text" id="last_name" name="last_name" style="width: 200px;">
+            </div>
+            <div class="sub_title">Radio Button</div>
+            <p>Choose your favorite Web Language:</p>
+
+            <div class="radio_input" style="display: flex; flex-direction: row; gap: 5px; align-items: center;">
+                <input type="radio" id="html" name="fav_language" value="html">
+                <label for="html">Html</label>
+                <input type="radio" id="CSS" name="fav_language" value="css">
+                <label for="CSS">CSS</label>
+                <input type="radio" id="JavaScript" name="fav_language" value="javascript">
+                <label for="JavaScript">JavaScript</label>
+
+            </div>
+
+            <div class="sub_title">Checkbox</div>
+            <p>Choose your favorite Web Language:</p>
+
+            <div class="checkbox_input" style="display: flex; flex-direction: column; gap: 10px;">
+                <div style="display: flex; align-items: center;">
+                    <input type="checkbox" id="html" name="fav_language" value="html">
+                    <label for="html" style="margin-left: 5px;">Html</label>
+                </div>
+                <div style="display: flex; align-items: center;">
+                    <input type="checkbox" id="CSS" name="fav_language" value="css">
+                    <label for="CSS" style="margin-left: 5px;">CSS</label>
+                </div>
+                <div style="display: flex; align-items: center;">
+                    <input type="checkbox" id="JavaScript" name="fav_language" value="javascript">
+                    <label for="JavaScript" style="margin-left: 5px;">JavaScript</label>
+                </div>
+            </div>
+            <input type="password" id="password" placeholder="Password">
+            <input type="password" id="confirmPassword" placeholder="Confirm Password">
+            <span id="passwordError" style="color: red; display: none;">Passwords do not match.</span>
+            <input type="submit" value="Submit" target="_blank">
+        </form>
+    </div>
+
 </body>
+
 </html>

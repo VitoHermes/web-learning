@@ -124,6 +124,13 @@ body {
     background-color: #2980b9;
 }
 
+.submit-btn:disabled {
+    background-color: #cccccc; /* 灰色背景 */
+    color: #666666; /* 灰色文字 */
+    cursor: not-allowed; /* 禁用状态的鼠标样式 */
+    opacity: 0.6; /* 透明度 */
+}
+
 /* responsive design */
 @media (max-width: 480px) {
     .registration-form {

@@ -94,3 +94,8 @@ ul {
     margin: 1rem 0;
     background: #E7E9EB;
 }
+.example-box .sub_title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 1rem;
+}

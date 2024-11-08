@@ -1,54 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registration Form</title>
     <link rel="stylesheet" href="../css/registration_form.css">
-    <script src="../js/registration_form.js"></script>
+    <!-- meta description is very important for SEO -->
+    <meta name="description" content="This is a registration form">
 </head>
+
 <body>
     <div class="container">
         <form name="registrationForm" class="registration-form" action="mailto:vito186cm@gmail.com" method="post">
             <div class="form-header">
                 <h1 class="form-title">Sign Up</h1>
             </div>
-            
+
             <div class="form-section">
                 <h2 class="section-title">Your basic info</h2>
                 <div class="form-group">
                     <label for="firstName">First Name:</label>
                     <!-- Input for first name -->
-                    <input type="text" id="firstName" name="firstName" class="form-control" required>
+                    <input type="text" id="firstName" name="firstName" class="form-control" placeholder="Please enter your first name" required>
                 </div>
                 <div class="form-group">
                     <label for="lastName">Last Name:</label>
                     <!-- Input for last name -->
-                    <input type="text" id="lastName" name="lastName" class="form-control" required>
+                    <input type="text" id="lastName" name="lastName" class="form-control" placeholder="Please enter your last name" required>
                 </div>
                 <div class="form-group">
                     <label for="email">Email:</label>
                     <!-- Input for email with pattern validation -->
-                    <input type="email" id="email" name="email" class="form-control" required
-                           pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" 
-                           title="Please enter a valid email address">
+                    <input type="email" id="email" name="email" class="form-control" placeholder="Please enter your email" required
+                        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Please enter a valid email address">
                 </div>
                 <div class="form-group">
                     <label for="username">Username:</label>
                     <!-- Input for username -->
-                    <input type="text" id="username" name="username" class="form-control" required>
+                    <input type="text" id="username" name="username" class="form-control" placeholder="Please enter your username" required>
                 </div>
                 <div class="form-group">
                     <label for="password">Password:(at least 8 characters)</label>
                     <!-- Input for password with minimum length validation -->
-                    <input type="password" id="password" name="password" class="form-control" required
-                           pattern=".{8,}" 
-                           title="password must be at least 8 characters long">
+                    <input type="password" id="password" name="password" class="form-control" placeholder="Please enter your password" required pattern=".{8,}"
+                        title="password must be at least 8 characters long">
                 </div>
                 <div class="form-group">
                     <label for="confirmPassword">Confirm Password:</label>
                     <!-- Input for confirming password -->
-                    <input type="password" id="confirmPassword" name="confirmPassword" class="form-control" required>
+                    <input type="password" id="confirmPassword" name="confirmPassword" class="form-control" placeholder="Please confirm your password" required>
+                    <span id="passwordError" style="color: red; display: none;">Passwords do not match.</span>
                 </div>
             </div>
 
@@ -59,7 +61,7 @@
                     <!-- Input for birth date -->
                     <input type="date" id="birthday" name="birthday" class="form-control" required>
                 </div>
-                
+
                 <div class="form-group">
                     <label>Gender:</label>
                     <!-- Radio buttons for gender selection -->
@@ -112,9 +114,12 @@
 
             <div class="form-group">
                 <!-- Submit button for the form -->
-                <button type="submit" class="submit-btn">Sign Up</button>
+                <button type="submit" class="submit-btn" id="submitButton">Sign Up</button>
             </div>
         </form>
     </div>
 </body>
+
+<script src="../js/registration_form.js"></script>
+
 </html>

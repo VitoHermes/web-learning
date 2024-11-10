@@ -43,6 +43,16 @@ main {
         }
     }
 }
+h3 {
+    text-align: center;
+}
+
+.description_image {
+    width: 50%;
+    margin: 0 auto;
+}
+/* 通过三个css控制不同屏幕下的布局，分别是1000px，700px，500px*/
+
 
 @media screen and (max-width: 1000px) {
     .card {
@@ -62,6 +72,7 @@ main {
 @media screen and (max-width: 500px) {
     main {
         grid-gap: $extra-small-spacing;
+        // 屏幕更小，调整了grid-gap和grid-template-columns
         grid-template-columns: $extra-small-spacing repeat(6, 1fr) $extra-small-spacing;
         .cards {
             grid-column: 2 / span 6;

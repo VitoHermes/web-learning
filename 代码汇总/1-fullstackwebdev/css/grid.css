@@ -52,6 +52,16 @@ main {
   width: 100%;
 }
 
+h3 {
+  text-align: center;
+}
+
+.description_image {
+  width: 50%;
+  margin: 0 auto;
+}
+
+/* 通过三个css控制不同屏幕下的布局，分别是1000px，700px，500px*/
 @media screen and (max-width: 1000px) {
   .card {
     -ms-grid-column-span: 6;

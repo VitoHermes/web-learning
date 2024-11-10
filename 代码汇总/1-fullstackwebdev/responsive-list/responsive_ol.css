@@ -1,0 +1,59 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --n:1;
+}
+
+body {
+    font-family: sans-serif;
+    --h:212deg;
+    --l:43%;
+    --brandColor:hsl(var(--h), var(--l), 75%);
+    margin: 0;
+    background-color: whitesmoke;
+}   
+
+p {
+    line-height: 1.6;
+}
+
+ol {
+    list-style: none;
+    padding: 0 1rem;
+    /* define a counter for each list item */
+    counter-reset: li;
+}
+
+li {
+    /* 作用在li和子元素上 */
+    --stop: calc(100% / var(--length) * var(--i));
+    --l:62%;
+    --l2:88%;
+    --h: calc(var(--i) - 1) * (180 / var(--length));
+    --c1: hsl(var(--h), 71%, var(--l));
+    --c2: hsl(var(--h),71%, var(--l2));
+
+    position: relative;
+    counter-increment: list;
+    max-width: 45rem;
+    margin: 2rem auto;
+    padding: 2rem 1rem 1rem;
+    border-radius: 0.25rem;
+    overflow: hidden;
+    background-color: white;
+    box-shadow: 0.1rem 0.1rem 1.5rem rgba(0,0,0,0.3);
+
+}
+
+li::before {
+    content:'';
+    display: block;
+    width: 100%;
+    height: 1rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(to right, var(--c1) var(--stop), var(--c2) var(--stop));
+}

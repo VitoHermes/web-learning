@@ -1,0 +1,74 @@
+$spacing-unit:40px;
+$smaill-spacing:20px;
+$extra-small-spacing:10px;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #6d6d6d;
+}
+
+main {
+    display: grid;
+    /* 左中右结构，中间12列，每列60px，两边留白，平均分配 */
+    grid-template-columns: 1fr repeat(12, minmax(auto, 60px)) 1fr;
+    grid-gap: $spacing-unit;
+    padding: $spacing-unit 0;
+}
+
+.cards { 
+    // 从第二列开始，占据12列
+    grid-column: 2 / span 12;
+    display: grid;
+    grid-template-columns: repeat(12, minmax(auto, 60px));
+    grid-gap: $spacing-unit;
+}
+
+.card {
+    // span 4 columns
+    grid-column-end: span 4;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    &:hover {
+        transform: translateY(-7px);
+    }
+    &__image-container {
+        width: 100%;
+        img {
+            width: 100%;
+        }
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .card {
+        grid-column-end:span 6;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    main {
+        grid-gap: $smaill-spacing;
+        .card {
+            grid-column-end: span 12;
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    main {
+        grid-gap: $extra-small-spacing;
+        grid-template-columns: $extra-small-spacing repeat(6, 1fr) $extra-small-spacing;
+        .cards {
+            grid-column: 2 / span 6;
+            grid-template-columns: repeat(6, 1fr);
+            .card {
+                grid-column-end: span 6;
+            }
+        }
+    }
+}

@@ -4,6 +4,7 @@
     padding: 0;
     box-sizing: border-box;
 }
+/*单位跟随公司标准*/
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -15,63 +16,62 @@ body {
 .container {
     display: flex;
     justify-content: center;
-    margin: 10px auto;
+    margin: 0.625rem auto;
     min-height: 100vh;
 }
 
 .registration-form {
     background: white;
-    padding: 40px;
-    border-radius: 10px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    padding: 2.5rem;
+    border-radius: 0.625rem;
+    box-shadow: 0 0 1.25rem rgba(0, 0, 0, 0.1);
     width: 100%;
-    max-width: 600px;
+    max-width: 37.5rem;
 }
 
 .form-header {
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 1.875rem;
     color: #2c3e50;
 }
 
 .form-title {
     color: #163b5f;
     font-size: 2em;
-    margin-bottom: 10px;
+    margin-bottom: 0.625rem;
 }
 
 .section-title {
     color: #416080;
     font-size: 1.2em;
-    margin: 20px 0;
-    padding-bottom: 10px;
-    border-bottom: 2px solid #eee;
+    margin: 1.25rem 0;
+    padding-bottom: 0.625rem;
+    border-bottom: 0.125rem solid #eee;
 }
 
-/* add a bullet point before the section title */
 .section-title::before {
     content: '•';
-    margin-right: 8px;
+    margin-right: 0.5rem;
     color: #416080;
     font-size: 1.2em;
 }
 
 .form-group {
-    margin-bottom: 20px;
+    margin-bottom: 1.25rem;
 }
 
 .form-group label {
     display: block;
-    margin-bottom: 8px;
+    margin-bottom: 0.5rem;
     font-weight: 500;
 }
 
 .form-control {
     width: 100%;
-    padding: 12px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    font-size: 16px;
+    padding: 0.75rem;
+    border: 0.0625rem solid #ddd;
+    border-radius: 0.3125rem;
+    font-size: 1rem;
     transition: border-color 0.3s ease;
 }
 
@@ -82,21 +82,21 @@ body {
 
 .gender-options {
     display: flex;
-    gap: 20px;
+    gap: 1.25rem;
 }
 
 .radio-item {
     display: flex;
     align-items: center;
-    gap: 5px;
+    gap: 0.3125rem;
 }
 
 .terms-group {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 0.625rem;
     margin-top: auto;
-    margin-bottom: 20px;
+    margin-bottom: 1.25rem;
 }
 
 .terms-link {
@@ -110,12 +110,12 @@ body {
 
 .submit-btn {
     width: 100%;
-    padding: 12px;
+    padding: 0.75rem;
     background-color: #3498db;
     color: white;
     border: none;
-    border-radius: 5px;
-    font-size: 16px;
+    border-radius: 0.3125rem;
+    font-size: 1rem;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
@@ -125,20 +125,18 @@ body {
 }
 
 .submit-btn:disabled {
-    background-color: #cccccc; /* 灰色背景 */
-    color: #666666; /* 灰色文字 */
-    cursor: not-allowed; /* 禁用状态的鼠标样式 */
-    opacity: 0.6; /* 透明度 */
+    background-color: #cccccc;
+    color: #666666;
+    cursor: not-allowed;
+    opacity: 0.6;
 }
 
 /* responsive design */
 @media (max-width: 480px) {
     .registration-form {
-        padding: 20px;
+        padding: 1.25rem;
     }
-    /* responsive design for gender options */
     .gender-options {
-        flex-direction: column;
-        gap: 10px;
+        gap: 0.625rem;
     }
 }

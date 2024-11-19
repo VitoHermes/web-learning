@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      // 基础类型解构
+      //字符串也可以解构赋值，这是因为此时字符串被转换成了一个类似数组的对象
+
+      // 本质"模式匹配"，只要等号两边模式相同，左边变量就会被赋对应值。
+      let arr = [1, [[2], 3]];
+      let [a,[[b],c]] = arr;
+      console.log(a,b,c);
+      // 对象数组解构
+      //对象的属性没有次序，变量必须与属性同名，才能取到正确的值
+      let obj = {
+        bar: "asd",
+        foo: 123,
+      };
+      let {bar,foo} = obj;
+      console.log(bar,foo);
+      const person = { name: "John", age: 30 };
+
+      // ...解构
+      let arr3 = [1, 2, 3, 4, 5];
+      let [first, ...rest] = arr3;
+      console.log(first, rest);
+      // 嵌套解构
+      let obj2 = { name: { first: "John", last: "Doe" } };
+      const {name:{first:firstname,last:lastname}} = obj2;
+      console.log('firstname',firstname,'lastname',lastname);
+      // 解构不成功为undefined
+      const {x,y} = {x:1}
+      console.log('x',x,'y',y);
+      // 解构默认赋值
+      const obj3 = {xx:1};
+      const {xx,zz=3} = obj3;
+      console.log('zz',zz); // 3
+      //用途
+      //1.交换变量
+      let xxx =1;
+      let yyy =2;
+      [xxx,yyy] = [yyy,xxx]
+      console.log('xxx',xxx,'yyy',yyy);
+      //2.从函数返回多个值
+      // 返回一个数组
+      function fn1(){
+        return [1,2,3]
+      }
+      let [aaa,bbb,ccc] = fn1();
+      console.log('aaa',aaa,'bbb',bbb,'ccc',ccc);
+      // 返回一个对象
+      function fn2(){
+        return {name:'jack',age:18}
+      }
+      let {name,age} = fn2();
+      console.log('name',name,'age',age);
+    </script>
+  </head>
+  <body></body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Wrap</title>
+    <style>
+        .container {
+            width: 80%;
+            height:600px;
+            background-color: aqua;
+            display:flex;
+            /* flex 默认子元素不换行，装不下缩短子元素宽度 */
+            flex-wrap: wrap; 
+            margin: 0 auto;
+        }
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: rgb(143, 101, 178);
+            color:white;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">hello world</div>
+        <div class="box">hello world</div>
+        <div class="box">hello world</div>
+        <div class="box">hello world</div>
+        <div class="box">hello world</div>
+    </div>
+</body>
+</html>

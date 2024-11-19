@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+    <style>
+        ul {
+            width: 80%;
+            height: 300px;
+            padding: 0;
+            background-color: aqua;
+            margin: 0 auto;
+            list-style: none;
+            display: flex;
+            justify-content: space-between; /* 主轴 */
+            align-items: center; /* 交叉轴 */
+        }
+        li {
+            margin: 0;
+            width: 100px;
+            height: 100px;
+            background-color: rgb(143, 101, 178);
+            flex-wrap: wrap;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>hello1</li>
+        <li>hello2</li>
+        <li>hello3</li>
+    </ul>
+</body>
+</html>

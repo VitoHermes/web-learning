@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <script>
+      //what's the output?
+      // 有值的是true，没有值的是false
+      console.log(Boolean(""));//f
+
+      console.log(Boolean(0));//f
+
+      console.log(Boolean(NaN));//f
+
+      console.log(Boolean(null));//f
+
+      console.log(Boolean(undefined));//f
+
+      console.log(Boolean("123"));//t
+
+      console.log(Boolean("hello"));//t
+      let value = "hello";
+      if(value){
+        console.log("true");
+      }else{
+        console.log("false");
+      }
+    </script>
+  </head>
+
+  <body></body>
+</html>

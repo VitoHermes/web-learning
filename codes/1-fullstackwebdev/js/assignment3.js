@@ -21,6 +21,9 @@ for (let i = 0; i < shoppingCart.length; i++) {
 }
 
 
+shoppingCart.forEach((item, index) => {
+    console.log(`${index + 1}. ${item}`);
+});
 // 查询是否在清单内
 
 // 重新构建物品对象

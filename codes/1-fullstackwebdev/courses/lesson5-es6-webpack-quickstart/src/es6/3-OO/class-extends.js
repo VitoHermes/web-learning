@@ -5,7 +5,26 @@
  */
 
 //关于命名规范，如果采用 OO 的写法，建议全部接受 Java 的编码规范。
-class Animal {
+class Creatures {
+    // 构造函数, 传入名字和年龄，初始化对象
+    constructor(name, age) {
+        this.name = name;
+        this.age = age;
+    };
+
+    // 方法
+    eat() {
+        console.log(`${this.name} eating`);
+    }
+
+    run() {
+        console.log(`${this.name} running`);
+    }
+
+}
+
+// 动物继承Creatures
+class Animal extends Creatures {
     constructor(name, age) {
         this.name = name;
         this.age = age;
@@ -30,8 +49,13 @@ class Animal {
 }
 
 class Monkey extends Animal {
-    constructor(name, age) {
-        super(name, age);
+    constructor(name, age, tail) {
+        super(name, age); // 调用父类的构造函数
+        this.tail = tail; // 初始化自己的属性
+    }
+
+    eat() { // 重写父类的方法
+        console.log(`猴子吃东西>${this.name}`);
     }
 }
 
@@ -53,8 +77,12 @@ class Human extends Monkey {
     }
 }
 
+let monkey = new Monkey("大漠穷秋", 18, true);
+let creatures = new Creatures("大漠穷秋", 18);
 let person = new Human("大漠穷秋", 18);
 console.log(person.name);
+monkey.eat();
+creatures.eat();
 person.eat();
 person.run();
 person.coding();

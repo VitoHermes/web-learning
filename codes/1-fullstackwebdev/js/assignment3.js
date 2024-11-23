@@ -16,8 +16,6 @@ for (let i = 0; i < shoppingCart.length; i++) {
         console.log("你的购物车满了");
         break;
     }
-    num = i + 1;
-    console.log(num + '.' + shoppingCart[i]);
 }
 
 

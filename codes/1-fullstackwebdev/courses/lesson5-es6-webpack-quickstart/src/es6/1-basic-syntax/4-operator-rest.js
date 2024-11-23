@@ -13,6 +13,8 @@
 /**
  * 1. 可变长参数，必须是最后一个参数
  */
+
+
 function sum(...args) {
     let result = 0;
     for (let i of args) {
@@ -20,11 +22,23 @@ function sum(...args) {
     }
     return result;
 }
+
+function sum1(...args) {
+    let result = 0;
+    result = args.forEach(item => {
+        result += item;
+    })
+    return result;
+}
 let result = sum(1, 2, 3, 4, 5);
 console.log(result);
+let result1 = sum1(1, 2, 3, 4, 5);
+// console.log(result1);
 
 /**
  * 2. 解构赋值
  */
 let [a, ...b] = [1, 2, 3, 4];
+let c = b[b.length - 1];
 console.log(b);
+console.log(c);

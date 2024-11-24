@@ -17,7 +17,10 @@ let promise = new Promise(function (resolve, reject) {
 });
 promise.then((value) => {
     console.log(value);
-}, (error) => { });
+}, 
+error => { 
+    console.log(error);
+});
 
 //3. 经典场景：封装Ajax操作
 function getData(url) {

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tax Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Tax Calculator</h1>
+        <div class="tax_form">
+            <div class="input_container">
+                <label for="income">Input your Income</label>
+                <input type="number" id="income">
+            </div>
+            <p class="error" style="display: none;">Please enter a valid number!</p>
+            <div class="result" style="display: none;">Your Tax is :</div>
+            <div class="tax_year_container">
+                <label for="taxYear">Select Tax Year</label>
+                <select name="taxYear" id="taxYear">
+                    <option value="2023">2023</option>
+                    <option value="2024">2024</option>
+            </div>
+            </select>
+            <div class="button_container">
+                <button id="calculate">Calculate</button>
+                <button id="reset">Reset</button>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="index.js"></script>
+
+</html>

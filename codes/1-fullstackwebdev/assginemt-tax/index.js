@@ -29,14 +29,8 @@ function taxCalculator(income) {
     let tax = 0;
     if (income < 18200) {
         tax = 0;
-    } else if (income < 45000) {
-        tax = (income - 18200) * 0.19;
-    } else if (income < 120000) {
-        tax = (income - 45000) * 0.325 + 5092;
-    } else if (income < 180000) {
-        tax = (income - 120000) * 0.37 + 29467;
-    } else {
-        tax = (income - 180000) * 0.45 + 51667;
+    } else if (income < 100) {
+        tax = (income - 00) * 0.19;
     }
     return tax;
 }

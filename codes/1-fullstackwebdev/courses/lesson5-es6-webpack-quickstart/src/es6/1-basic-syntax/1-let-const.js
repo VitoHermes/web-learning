@@ -55,6 +55,14 @@ console.log(name);
     test();
 }
 
+const add = (a, b) => a + b;
+console.log(add(1, 2));
+const printf = (name) => {
+    console.log(`hello ${name}`);
+    return `hello ${name}`;
+}
+console.log(printf("damo"));
+
 /**
  * 需要熟练掌握的let特性：
  * - 同一个作用域内不允许重复的变量名

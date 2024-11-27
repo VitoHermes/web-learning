@@ -1,5 +1,10 @@
 import Monkey from "./Monkey";
 import Human from "./Human";
+import Animal from "./Animal";
+
+let animal = new Animal();
+let animalRun = animal.run();
+console.log(animalRun);
 
 let monkey = new Monkey();
 let monkeyRun = monkey.run();

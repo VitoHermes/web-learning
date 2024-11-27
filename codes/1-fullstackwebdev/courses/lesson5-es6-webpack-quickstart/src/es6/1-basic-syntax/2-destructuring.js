@@ -53,35 +53,44 @@
 // console.log(l);
 // console.log(">>>" + m);
 
-let user = {
-    userName: 'damo',
-    userAge: 18,
-    userAddr: 'Beijing',
-    userSkills: ['JS', 'TS', 'MySQL', 'Linux'],
-    phones: [{
-        SIM: '12345678911',
-        operator: '中国移动',
-        addr: '北京市'
-    },
-    {
-        SIM: '12345678912',
-        operator: '中国联通',
-        addr: '南京市'
-    }]
-}
+// let user = {
+//     userName: 'damo',
+//     userAge: 18,
+//     userAddr: 'Beijing',
+//     userSkills: ['JS', 'TS', 'MySQL', 'Linux'],
+//     phones: [{
+//         SIM: '12345678911',
+//         operator: '中国移动',
+//         addr: '北京市'
+//     },
+//     {
+//         SIM: '12345678912',
+//         operator: '中国联通',
+//         addr: '南京市'
+//     }]
+// }
 
 
-function printUserInfo(user) {
-    let {userName, userAge, userAddr, userSkills, phones:[{SIM: firstSIM}, {SIM: secondSIM}]} = user;
-    console.log(userName);
-    console.log(userAge);
-    console.log(userAddr);
-    console.log(userSkills[0]);
-    console.log(firstSIM);
-    console.log(secondSIM);
-}
+let [a, [b], c] = [1, [2, 3], 4];
+console.log(a); // 1
+console.log(b); // 2
+console.log(c); // 4
 
-printUserInfo(user);
+let [d,e,f] = [1,[2,3],5];
+console.log(d); // 1
+console.log(e); // [2,3]
+console.log(f); // 5
+// function printUserInfo(user) {
+//     let {userName, userAge, userAddr, userSkills, phones:[{SIM: firstSIM}, {SIM: secondSIM}]} = user;
+//     console.log(userName);
+//     console.log(userAge);
+//     console.log(userAddr);
+//     console.log(userSkills[0]);
+//     console.log(firstSIM);
+//     console.log(secondSIM);
+// }
+
+// printUserInfo(user);
 
 // //交换变量值更加快捷
 // let [j, k] = [1, 2];

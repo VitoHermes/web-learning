@@ -26,8 +26,7 @@ class Creatures {
 // 动物继承Creatures
 class Animal extends Creatures {
     constructor(name, age) {
-        this.name = name;
-        this.age = age;
+        super(name, age);
     }
 
     eat() {

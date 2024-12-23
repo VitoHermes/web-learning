@@ -1,22 +1,18 @@
 import SingleCityCard from './components/SingleCityCard';
 import './CityWeatherCard.css';
-
-
-// {
-//     'city': 'London',
-//     'weather': 'Sunny',
-//     'minTemp': 10,
-//     'maxTemp': 20,
-// }
+import CitySearch from './components/CitySearch';
 
 function CityWeatherCard(props) {
 
     const { data } = props;
     return (
         <div className="other-city-weather-card">
-            {data.map((item) => (
-                <SingleCityCard key={item.city} city={item.city} weather={item.weather} minTemp={item.minTemp} maxTemp={item.maxTemp} />
-            ))}
+            <CitySearch />
+            <div className="other-city-weather-card-list">
+                {data.map((item) => (
+                    <SingleCityCard key={item.city} city={item.city} weather={item.weather} minTemp={item.minTemp} maxTemp={item.maxTemp} />
+                ))}
+            </div>
         </div>
     )
 }

@@ -35,7 +35,16 @@ function TodayWeatherCard(props) {
     } = props.data;
 
     return (
-        <div className="today-weather-card">
+        <div
+            className="today-weather-card"
+            style={{
+                backgroundImage: `url('/assets/background/${weather}_background.png')`,
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+                backgroundRepeat: 'no-repeat',
+                backgroundColor: 'rgba(21, 0, 255, 0.8)',
+                backgroundBlendMode: 'overlay',
+            }}>
             <p className="text-sm mt-3">{renderDate(date)}</p>
 
             <h2 className="mt-5 mb-5 text-2xl text-bold">{city}</h2>

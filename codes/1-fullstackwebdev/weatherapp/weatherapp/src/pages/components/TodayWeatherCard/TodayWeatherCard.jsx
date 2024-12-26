@@ -1,7 +1,20 @@
+import { useEffect, useState } from "react";
 import "./TodayWeatherCard.css";
 
 
 function TodayWeatherCard(props) {
+    const [dateNow, setDateNow] = useState(new Date());
+
+    useEffect(() => {
+        // setDateNow(new Date());
+
+        const intervalId = setInterval(() => {
+            setDateNow(new Date());
+        }, 60000);
+        return () => clearInterval(intervalId);
+
+    }, []);
+
     const renderDate = (date) => {
         const options = { day: '2-digit', year: 'numeric', month: 'short', weekday: 'long', hour: '2-digit', minute: '2-digit' };
         const formattedDate = new Intl.DateTimeFormat('en-US', options).format(new Date(date));
@@ -19,19 +32,21 @@ function TodayWeatherCard(props) {
 
     const weathersMap = (weather) => {
         return (
-            <img src={`/assets/weather_icon/${weather}.png`} alt={weather} />
+            <img src={weatherIconLg} alt={weather} />
         )
     }
 
     const {
-        date,
         city,
         weather,
         water,
         wind,
         sun,
+        temp,
         minTemp,
-        maxTemp
+        maxTemp,
+        temp_feels_like,
+        weatherIconLg
     } = props.data;
 
     return (
@@ -45,12 +60,12 @@ function TodayWeatherCard(props) {
                 backgroundColor: 'rgba(21, 0, 255, 0.8)',
                 backgroundBlendMode: 'overlay',
             }}>
-            <p className="text-sm mt-3">{renderDate(date)}</p>
+            <p className="text-sm mt-3">{renderDate(dateNow)}</p>
 
             <h2 className="mt-5 mb-5 text-2xl text-bold">{city}</h2>
 
-            <h2 className="text-bold text-6xl mt-3">{`${minTemp}°C`}</h2>
-            <p className="text-sm">{`${minTemp}~${maxTemp}°`}</p>
+            <h2 className="text-bold text-6xl mt-3">{`${temp.toFixed(1)}°C`}</h2>
+            <p className="text-sm">{`${minTemp.toFixed(1)}~${maxTemp.toFixed(1)}°`}</p>
 
             <p className="mt-20 mb-8">{weathersMap(weather)}</p>
 
@@ -58,7 +73,7 @@ function TodayWeatherCard(props) {
                 <div>{renderDetails('humidity.svg', water)}</div>
                 <div>{renderDetails('wind_speed.svg', wind)}</div>
                 <div>{renderDetails('PM2.5.svg', sun)}</div>
-                <div>{renderDetails('Somatosensory_temperature.svg', minTemp)}</div>
+                <div>{renderDetails('Somatosensory_temperature.svg', temp_feels_like)}</div>
             </div>
         </div>
     )

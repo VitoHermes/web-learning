@@ -1,15 +1,38 @@
+import { useState, useEffect } from "react";
 import TodayWeatherCard from "../TodayWeatherCard/TodayWeatherCard";
 import ForecastWeatherCard from "../ForecastWeatherCard/ForcastWeatherCard";
 import CityWeatherCard from "../CityWeatherCard/CityWeatherCard";
-
+import { getTempToday } from "../../../utils/getTempToday";
 import "./MainCard.css";
+import { formatLocation } from "../../../utils/formatLocation";
+
+
 
 function MainCard(props) {
     const { currentCity, otherCities } = props;
+    const currentCityLocation = formatLocation('melbourne');
+    const [currentCityData, setCurrentCityData] = useState(null);
+
+
+    useEffect(() => {
+        getTempToday(currentCityLocation)
+            .then(currentCityData => {
+                setCurrentCityData(currentCityData);
+            })
+            .catch(error => {
+                console.error('Error fetching city data:', error);
+            });
+    }, [currentCityLocation]);
+
+
     return (
         <div className="main-card">
             <div className="today-weather">
-                <TodayWeatherCard data={currentCity.today} />
+                {currentCityData ? (
+                    <TodayWeatherCard data={currentCityData} />
+                ) : (
+                    <div>Loading...</div>
+                )}
             </div>
             <div className="divider">
                 <div className="forecast-weather">

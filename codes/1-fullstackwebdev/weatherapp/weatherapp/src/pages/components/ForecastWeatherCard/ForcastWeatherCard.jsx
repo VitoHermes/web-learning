@@ -3,7 +3,6 @@ import './ForecastWeatherCard.css';
 
 function ForcastWeatherCard(props) {
     const { data } = props;
-    console.log(data);
     return (
         <div className="forecast-weather-card">
             {data.map((item) => (

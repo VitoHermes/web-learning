@@ -6,13 +6,10 @@ function TodayWeatherCard(props) {
     const [dateNow, setDateNow] = useState(new Date());
 
     useEffect(() => {
-        // setDateNow(new Date());
-
         const intervalId = setInterval(() => {
             setDateNow(new Date());
         }, 60000);
         return () => clearInterval(intervalId);
-
     }, []);
 
     const renderDate = (date) => {

@@ -22,7 +22,7 @@ function MainCard(props) {
             .catch(error => {
                 console.error('Error fetching city data:', error);
             });
-    }, [currentCityLocation]);
+    }, []);
 
 
     return (

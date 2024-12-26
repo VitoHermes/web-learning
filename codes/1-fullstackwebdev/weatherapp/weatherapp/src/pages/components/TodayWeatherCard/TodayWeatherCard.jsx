@@ -23,7 +23,7 @@ function TodayWeatherCard(props) {
 
     const renderDetails = (icon, details) => {
         return (
-            <div className="flex flex-col items-center justify-centern">
+            <div className="flex flex-col items-center justify-centern w-[30px] h-[30px]">
                 <img src={`/assets/meta_icon/${icon}`} alt={details} />
                 <p>{details}</p>
             </div>
@@ -46,7 +46,9 @@ function TodayWeatherCard(props) {
         minTemp,
         maxTemp,
         temp_feels_like,
-        weatherIconLg
+        weatherIconLg,
+        sun_set,
+        sun_rise
     } = props.data;
 
     return (
@@ -70,10 +72,10 @@ function TodayWeatherCard(props) {
             <p className="mt-20 mb-8">{weathersMap(weather)}</p>
 
             <div className="details">
+                <div>{renderDetails('sunrise.svg', sun_rise)}</div>
+                <div>{renderDetails('sunset.svg', sun_set)}</div>
                 <div>{renderDetails('humidity.svg', water)}</div>
                 <div>{renderDetails('wind_speed.svg', wind)}</div>
-                <div>{renderDetails('PM2.5.svg', sun)}</div>
-                <div>{renderDetails('Somatosensory_temperature.svg', temp_feels_like)}</div>
             </div>
         </div>
     )

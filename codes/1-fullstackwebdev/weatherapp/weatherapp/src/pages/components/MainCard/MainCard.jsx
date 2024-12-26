@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import TodayWeatherCard from "../TodayWeatherCard/TodayWeatherCard";
 import ForecastWeatherCard from "../ForecastWeatherCard/ForcastWeatherCard";
 import CityWeatherCard from "../CityWeatherCard/CityWeatherCard";
-import { getTempToday } from "../../../utils/getTempToday";
+import { GetTempToday } from "../../../utils/getTempToday";
 import "./MainCard.css";
 import { formatLocation } from "../../../utils/formatLocation";
 
@@ -15,7 +15,7 @@ function MainCard(props) {
 
 
     useEffect(() => {
-        getTempToday(currentCityLocation)
+        GetTempToday(currentCityLocation)
             .then(currentCityData => {
                 setCurrentCityData(currentCityData);
             })

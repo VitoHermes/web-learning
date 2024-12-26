@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { getWeatherIconLg } from './getWeatherIconLg';
 
-export const getTempToday = async (props) => {
+export const GetTempToday = async (props) => {
     const { latitude, longitude } = props;
     const apiKey = '31f0270f73eec09e278e668dbaabb991';
     const url = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&lang=zh_cn&units=metric`;
@@ -18,7 +18,9 @@ export const getTempToday = async (props) => {
         weather_description,
         weather_icon,
         wind_speed,
-        temp_feels_like
+        temp_feels_like,
+        sun_set,
+        sun_rise
     ] = [
             data.main.temp,
             data.main.temp_min,
@@ -28,7 +30,9 @@ export const getTempToday = async (props) => {
             data.weather[0].description,
             data.weather[0].icon,
             data.wind.speed,
-            data.main.feels_like
+            data.main.feels_like,
+            data.sys.sunset,
+            data.sys.sunrise
         ];
     // console.log(temp, temp_min, temp_max, humidity, weather, weather_description, weather_icon, wind_speed, temp_feels_like);
     // console.log(data);
@@ -38,6 +42,12 @@ export const getTempToday = async (props) => {
         const date = new Date(timestamp * 1000);
         const formattedDate = date.toISOString().split('T')[0];
         return formattedDate;
+    }
+
+    const getTime = (timestamp) => {
+        const date = new Date(timestamp * 1000);
+        const formattedTime = date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+        return formattedTime;
     }
 
     return {
@@ -52,7 +62,9 @@ export const getTempToday = async (props) => {
         'weatherIconLg': weatherIconLg,
         'water': humidity,
         'wind': wind_speed,
-        'temp_feels_like': temp_feels_like
+        'temp_feels_like': temp_feels_like,
+        'sun_set': getTime(sun_set),
+        'sun_rise': getTime(sun_rise)
     };
 };
 

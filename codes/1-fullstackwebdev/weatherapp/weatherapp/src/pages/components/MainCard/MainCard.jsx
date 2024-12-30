@@ -22,7 +22,7 @@ function MainCard(props) {
             .catch(error => {
                 console.error('Error fetching city data:', error);
             });
-    }, []);
+    }, []); // Empty dependency array ensures this runs only once on mount 
 
 
     return (

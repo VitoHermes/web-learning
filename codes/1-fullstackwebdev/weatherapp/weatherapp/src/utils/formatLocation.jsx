@@ -36,5 +36,6 @@ export const formatLocation = (city) => {
     if (!cityLocation[cityName]) {
         return null;
     }
-    return { latitude: cityLocation[cityName].latitude, longitude: cityLocation[cityName].longitude };
+    const location = { latitude: cityLocation[cityName].latitude, longitude: cityLocation[cityName].longitude };
+    return location;
 };

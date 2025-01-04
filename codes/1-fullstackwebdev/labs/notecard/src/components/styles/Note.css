@@ -1,0 +1,41 @@
+.note {
+    padding: 15px;
+    height: 206px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.note__body {
+    font-size: 16px;
+    color: #333;
+}
+
+.note__footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.note__delete {
+    margin-left: auto;
+}
+
+.note__delete:hover {
+    cursor: pointer;
+}
+
+.note__save {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    height: 30px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}

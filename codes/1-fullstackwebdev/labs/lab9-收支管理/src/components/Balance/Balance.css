@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.balance-title {
+    font-size: 2em;
+    color: #555;
+    text-align: center;
+}
+
+.balance-text {
+    font-size: 3em;
+    color: #333;
+    text-align: center;
+    margin: 0;
+}

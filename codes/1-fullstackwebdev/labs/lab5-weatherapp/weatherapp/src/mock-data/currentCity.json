@@ -1,0 +1,54 @@
+{
+    "today": {
+        "date": "2024-03-20",
+        "city": "Melbourne",
+        "weather": "Cloudy",
+        "water": 85,
+        "wind": 9,
+        "sun": 75,
+        "minTemp": 10,
+        "maxTemp": 20
+    },
+    "forecast": [
+        {
+            "date": "24 July",
+            "day": "Monday",
+            "weather": "Rain",
+            "water": 85,
+            "wind": 9,
+            "sun": 75,
+            "minTemp": 10,
+            "maxTemp": 20
+        },
+        {
+            "date": "25 July",
+            "day": "Tuesday",
+            "weather": "Cloudy",
+            "water": 85,
+            "wind": 9,
+            "sun": 75,
+            "minTemp": 10,
+            "maxTemp": 20
+        },
+        {
+            "date": "26 July",
+            "day": "Wednesday",
+            "weather": "Cloudy_day",
+            "water": 85,
+            "wind": 9,
+            "sun": 75,
+            "minTemp": 10,
+            "maxTemp": 20
+        },
+        {
+            "date": "27 July",
+            "day": "Thursday",
+            "weather": "Sunny",
+            "water": 85,
+            "wind": 9,
+            "sun": 75,
+            "minTemp": 10,
+            "maxTemp": 20
+        }
+    ]
+}

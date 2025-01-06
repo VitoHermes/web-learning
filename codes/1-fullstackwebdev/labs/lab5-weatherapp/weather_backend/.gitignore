@@ -1,0 +1,10 @@
+/node_modules
+/dist
+/build
+/public
+/src
+/test
+/types
+/webpack.config.js
+
+.env

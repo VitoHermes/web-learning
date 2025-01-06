@@ -1,0 +1,47 @@
+.App {
+  text-align: center;
+}
+
+.container {
+  max-width: 80%;
+  padding: 0 15px;
+  display: flex;
+  margin: 0 auto;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+/* .list-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.list-group-item {
+  position: relative;
+  display: bolck;
+  padding: 1rem;
+  border: 1px solid #363636;
+} */
+
+/* .pagination {
+  display: flex;
+  list-style: none;
+  flex-wrap: wrap;
+  border-radius: 0.25rem;
+} */
+
+.page-link {
+  color: aquamarine;
+  background: #fff;
+  border: 1px solid #363636;
+  padding: 0.5rem 1rem;
+  margin: 0.25rem;
+  border-radius: 0.25rem;
+  cursor: pointer;
+}

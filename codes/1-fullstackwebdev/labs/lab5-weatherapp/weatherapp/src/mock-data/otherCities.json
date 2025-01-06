@@ -1,0 +1,26 @@
+[
+    {
+        "city": "Sydney",
+        "weather": "Sunny",
+        "minTemp": 10,
+        "maxTemp": 20
+    },
+    {
+        "city": "Shanghai",
+        "weather": "Sunny",
+        "minTemp": 10,
+        "maxTemp": 20
+    },
+    {
+        "city": "New York",
+        "weather": "Sunny",
+        "minTemp": 10,
+        "maxTemp": 20
+    },
+    {
+        "city": "London",
+        "weather": "Sunny",
+        "minTemp": 10,
+        "maxTemp": 20
+    }
+]

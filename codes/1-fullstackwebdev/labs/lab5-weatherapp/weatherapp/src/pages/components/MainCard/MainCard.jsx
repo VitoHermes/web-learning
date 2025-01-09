@@ -3,6 +3,7 @@ import TodayWeatherCard from "../TodayWeatherCard/TodayWeatherCard";
 import ForecastWeatherCard from "../ForecastWeatherCard/ForcastWeatherCard";
 import CityWeatherCard from "../CityWeatherCard/CityWeatherCard";
 import { GetTempToday } from "../../../utils/getTempToday";
+import { getWeathers } from "../../../utils/getTempTodayFromBackend";
 import "./MainCard.css";
 import { formatLocation } from "../../../utils/formatLocation";
 
@@ -16,6 +17,7 @@ function MainCard(props) {
 
     useEffect(() => {
         GetTempToday(currentCityLocation)
+            // getWeathers(currentCityLocation)
             .then(currentCityData => {
                 setCurrentCityData(currentCityData);
             })

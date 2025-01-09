@@ -6,8 +6,33 @@ const books = [
     { id: 5, title: 'Book 5', author: 'Author 5', description: 'Description 5' },
 ];
 
+const food = [
+    { id: 1, name: 'Food 1', calories: 100, mealType: 'breakfast' },
+    { id: 2, name: 'Food 2', calories: 200, mealType: 'lunch' },
+    { id: 3, name: 'Food 3', calories: 300, mealType: 'dinner' },
+    { id: 4, name: 'Food 4', calories: 400, mealType: 'snacks' }
+];
+
+
 const FAKE_DELAY = 2000;
 const fakeAPI = {
+    fetchFoods: () => {
+        return new Promise((resolve) => {
+            setTimeout(() => {
+                resolve(food);
+            }, FAKE_DELAY);
+        });
+    },
+    addFood: (food) => {
+        return new Promise((resolve) => {
+            setTimeout(() => {
+                food.id = Math.max(...food.map((f) => f.id)) + 1;
+                food.push(food);
+                resolve(food);
+            }, FAKE_DELAY);
+        });
+    },
+
     fetchBooks: () => {
         return new Promise((resolve) => {
             setTimeout(() => {

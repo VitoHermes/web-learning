@@ -15,7 +15,7 @@ export default function BookList() {
     }, [books]);
 
     return (
-        <div>
+        <div className="book-list">
             <h2>Book List</h2>
             {books.length === 0 ? (
                 <p>Loading...</p>
@@ -23,7 +23,8 @@ export default function BookList() {
                 <ul>
                     {books.map((book) => (
                         <li key={book.id}>
-                            {book.title} by {book.author}
+                            <strong>{book.title}</strong> by {book.author}
+                            <button onClick={() => dispatch(deleteBook(book.id))}>Delete</button>
                         </li>
                     ))}
                 </ul>

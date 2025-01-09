@@ -5,6 +5,7 @@ import IncomeExpense from './components/IncomeExpense/IncomeExpense';
 import Transaction from './components/Transaction/Transaction';
 import { GlobalProvider } from './context/GlobalState';
 
+
 function App() {
   return (
     <div className="App">
